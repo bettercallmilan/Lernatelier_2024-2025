@@ -5,8 +5,11 @@
 ## Grob-Planung
 
 1. Wo stehen Sie mit Ihren Noten? In welchen Modulen waren Sie besonders stark; in welchen sind die ungenügend? Welche davon sind besonders wichtig?
+   Ich hatte in allen Modulen eine gute Note. Besonders wichtig war mir HTML/CSS.
 2. Welches der Module 231, 320, 322 scheint Ihnen besonders wichtig? Wo brauchen Sie am meisten Übung?
+   Mir scheint Modul 320 (OOP) ziemlich wichtig und werde sicher Übung brauchen.
 3. Was wäre ein geeignetes Projekt für diese LP6? Würde sich dieses auch eignen, um es Ihrer Bewerbung hinzuzufügen?
+   Weiss es noch nicht.
 
 ## 23.8
 
