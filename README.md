@@ -13,6 +13,11 @@
 
 ## 23.8
 
+- [ ] M320 PR_4203 Präsentation Zugriffsmodifizierung / Kapselung
+- [ ] M320 LA_4213 Auftrag Zugriffsmodifizierung / Kapselung
+- [ ] M320 PR_4204 Präsentation Konstruktoren & Objekte init
+- [ ] M320 LA_4205 Auftrag Konstruktoren & Objekte init
+
 ✍️ Heute habe ich... (50-100 Wörter)
 
 ## 30.8
