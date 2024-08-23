@@ -13,12 +13,12 @@
 
 ## 23.8
 
-- [ ] M320 PR_4203 Präsentation Zugriffsmodifizierung / Kapselung
-- [ ] M320 LA_4213 Auftrag Zugriffsmodifizierung / Kapselung
-- [ ] M320 PR_4204 Präsentation Konstruktoren & Objekte init
-- [ ] M320 LA_4205 Auftrag Konstruktoren & Objekte init
+- [x] M320 PR_4203 Präsentation Zugriffsmodifizierung / Kapselung
+- [x] M320 LA_4213 Auftrag Zugriffsmodifizierung / Kapselung
+- [x] M320 PR_4204 Präsentation Konstruktoren & Objekte init
+- [x] M320 LA_4205 Auftrag Konstruktoren & Objekte init
 
-✍️ Heute habe ich... (50-100 Wörter)
+✍️ Heute habe ich beide Präsentationen und beide Aufträge erledigen können und somit mein Wissen über die Zugriffsmodifizierung, Kapselung, Konstrukotren und Objekte init in C# erweitert. (50-100 Wörter)
 
 ## 30.8
 
