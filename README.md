@@ -18,15 +18,15 @@
 - [x] M320 PR_4204 Präsentation Konstruktoren & Objekte init
 - [x] M320 LA_4205 Auftrag Konstruktoren & Objekte init
 
-✍️ Heute habe ich beide Präsentationen und beide Aufträge erledigen können und somit mein Wissen über die Zugriffsmodifizierung, Kapselung, Konstrukotren und Objekte init in C# erweitert. (50-100 Wörter)
+✍️ Heute habe ich beide Präsentationen und beide Aufträge erledigen können und somit mein Wissen über die Zugriffsmodifizierung, Kapselung, Konstrukotren und Objekte init in C# erweitert. (25 Wörter)
 
 ## 30.8
 
-- [ ] LA_4306 Auftrag Methoden ohne Überladung
-- [ ] PR_4205 Präsentation Methoden mit Überladung
-- [ ] LA_4207 Auftrag Methoden mit Überladung
+- [x] LA_4306 Auftrag Methoden ohne Überladung
+- [x] PR_4205 Präsentation Methoden mit Überladung
+- [x] LA_4207 Auftrag Methoden mit Überladung
 - [ ] LA_4209 Auftrag Promillerechner
 
-✍️ Heute habe ich... (50-100 Wörter)
+✍️ Heute habe ich die Präsentation und die Aufträge zu Methoden (mit und ohne Überladung) erledigen können. Ich habe noch mit dem Promillerechnerauftrag angefangen. Darin konnte ich aus der UML Tabelle die Werte ins Programm bringen können, für die eigentlichen Funktion des Programms hatte ich keine Zeit. (46 Wörter)
 
 ☝️ Vergessen Sie nicht, bis einen ersten Code auf github hochzuladen
