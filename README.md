@@ -9,7 +9,7 @@
 2. Welches der Module 231, 320, 322 scheint Ihnen besonders wichtig? Wo brauchen Sie am meisten Übung?
    Mir scheint Modul 320 (OOP) ziemlich wichtig und werde sicher Übung brauchen.
 3. Was wäre ein geeignetes Projekt für diese LP6? Würde sich dieses auch eignen, um es Ihrer Bewerbung hinzuzufügen?
-   Da ich die jetztigen Module ziemlich bedeutend und manchmal schwierig finde, werde ich mich von einem Projekt fernhalten, bis ich sicher bin, dass ich die Module (vorallem 320) vollständig verstanden habe.
+   Da ich die jetztigen Module ziemlich bedeutend und manchmal schwierig finde, werde ich mich von einem Projekt fernhalten, bis ich sicher bin, dass ich die Module (vorallem 320) vollständig verstanden habe. Falls ich Zeit für ein Projekt finde, mache ich sicherlich etwas mit OOP (M320).
 
 ## 23.8
 
@@ -22,9 +22,10 @@
 
 ## 30.8
 
-- [ ] Erstes Arbeitspaket
-- [ ] ...
-- [ ] Viertes AP
+- [ ] LA_4306 Auftrag Methoden ohne Überladung
+- [ ] LA_4205 Präsentation Methoden mit Überladung
+- [ ] LA_4207 Auftrag Methoden mit Überladung
+- [ ] LA_4209 Auftrag Promillerechner
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
