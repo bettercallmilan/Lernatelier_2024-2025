@@ -23,7 +23,7 @@
 ## 30.8
 
 - [ ] LA_4306 Auftrag Methoden ohne Überladung
-- [ ] LA_4205 Präsentation Methoden mit Überladung
+- [ ] PR_4205 Präsentation Methoden mit Überladung
 - [ ] LA_4207 Auftrag Methoden mit Überladung
 - [ ] LA_4209 Auftrag Promillerechner
 
