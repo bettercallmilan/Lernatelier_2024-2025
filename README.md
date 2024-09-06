@@ -33,7 +33,7 @@
 
 - [ ] LA_4209 Auftrag Promillerechner
 - [ ] Website aus Modul 293 überarbeiten
-- [ ] Auftrag aus Modul 320 (OOP; bekannt am Mittwoch)
+- [x] Auftrag aus Modul 320 (OOP; bekannt am Mittwoch)
 - [ ] Auftrag aus Modul 320 (OOP; bekannt am Mittwoch) 
 
 ✍️ Heute habe ich...
