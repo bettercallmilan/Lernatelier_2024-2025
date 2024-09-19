@@ -31,11 +31,27 @@
 
 ## 06.09
 
-- [ ] LA_4209 Auftrag Promillerechner
+- [x] LA_4209 Auftrag Promillerechner
 - [ ] Website aus Modul 293 überarbeiten
-- [x] Auftrag aus Modul 320 (OOP; bekannt am Mittwoch)
-- [ ] Auftrag aus Modul 320 (OOP; bekannt am Mittwoch) 
+- [x] PR_4206 Vererbung
+- [x] LA_4208 Vererbung
+
+✍️ Heute habe ich die Aufträge zur Vererbung erledigt. Leider hatte ich keine Zeit, an der Website zu arbeiten.
+
+## 12.09
+
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
 
 ✍️ Heute habe ich...
 
-☝️ Vergessen Sie nicht, bis einen ersten Code auf github hochzuladen
+## 19.09
+
+- [ ] LB M322: Benutzerschnittstellen
+- [ ] LB M322: Benutzerschnittstellen
+- [ ] M320 gelerntes repetieren (Polymorphismus)
+- [ ] an Überarbeitung der Website M293 arbeiten
+
+✍️ Heute habe ich...
