@@ -49,9 +49,18 @@
 
 ## 20.09
 
-- [ ] LB M322: Benutzerschnittstellen
-- [ ] LB M322: Benutzerschnittstellen
-- [ ] M320 gelerntes repetieren (Polymorphismus)
-- [ ] an Überarbeitung der Website M293 arbeiten
+- [x] LB M322: Benutzerschnittstellen
+- [x] LB M322: Benutzerschnittstellen
+- [x] M320 gelerntes repetieren (Polymorphismus)
+- [x] an Überarbeitung der Website M293 arbeiten
+
+✍️ Heute konnte ich alle 4 Arbeitspakete lösen. In LB M322 habe ich Teilaufgabe 3 (Persona und User Stories erstellen) und Teilaufgabe 4 (Low-Fidelity-Prototyp) machen können. Den Polymorphismus konnte ich auch noch repetieren. Dazu habe ich meine ganze lens.jankovic.tech Website nach meinem Belieben überarbeitet.
+
+## 27.09
+
+- [ ] M320 OBA: Left Center Right
+- [ ] M320 OBA: Left Center Right
+- [ ] M231 verbleibende Aufträge lösen
+- [ ] M231 verbleibende Aufträge lösen
 
 ✍️ Heute habe ich...
