@@ -40,12 +40,12 @@
 
 ## 12.09
 
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
+- [x] PR_4204 Konstruktoren
+- [x] PR_4204 Konstruktoren
+- [x] LA_4205 Konstruktoren 
+- [x] LA_4205 Konstruktoren
 
-✍️ Heute habe ich...
+✍️ Heute habe ich mich mit dem Thema Konstruktoren befasst.
 
 ## 19.09
 
