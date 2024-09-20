@@ -38,7 +38,7 @@
 
 ✍️ Heute habe ich die Aufträge zur Vererbung erledigt. Leider hatte ich keine Zeit, an der Website zu arbeiten.
 
-## 12.09
+## 13.09
 
 - [x] PR_4204 Konstruktoren
 - [x] PR_4204 Konstruktoren
@@ -47,7 +47,7 @@
 
 ✍️ Heute habe ich mich mit dem Thema Konstruktoren befasst.
 
-## 19.09
+## 20.09
 
 - [ ] LB M322: Benutzerschnittstellen
 - [ ] LB M322: Benutzerschnittstellen
