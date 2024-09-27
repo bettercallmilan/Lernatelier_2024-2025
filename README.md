@@ -60,7 +60,7 @@
 
 - [ ] M320 OBA: Left Center Right
 - [ ] M320 OBA: Left Center Right
-- [ ] M231 verbleibende Aufträge lösen
+- [x] M231 verbleibende Aufträge lösen
 - [ ] M231 verbleibende Aufträge lösen
 
 ✍️ Heute habe ich...
