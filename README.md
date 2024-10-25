@@ -13,19 +13,16 @@
 
 ## 25.10
 
-- [ ] M294 LA_8421 JavaScript GrundFunktionen
+- [x] M294 LA_8421 JavaScript GrundFunktionen
 - [ ] M294 LA_8421 JS SchereSteinPapier
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, bis einen ersten Code auf github hochzuladen
+✍️ Heute habe ich die zwei Aufträge aus dem Modul 294, die ich letztes Mal im Unterricht wegen der Zeit nicht erledigen konnte, erledigt. Ich konnte die Grundlagen von JavaScript lernen. Zu SchereSteinPapier bin ich noch nicht gekommen, da die Lernvideos aus dem Auftrag viel Zeit brauchten. (46 Wörter)
 
 ## 1.11
 
-- [ ] Erstes Arbeitspaket
-- [ ] ...
-- [ ] Viertes AP
+- [ ] M320 repetieren (Prüfung am Mittwoch, 6.11)
+- [ ] M320 repetieren (Prüfung am Mittwoch, 6.11)
+- [ ] JS einfache App (evtl. Tic Tac Toe)
+- [ ] JS einfache App (evtl. Tic Tac Toe)
 
 ✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, bis einen ersten Code auf github hochzuladen
