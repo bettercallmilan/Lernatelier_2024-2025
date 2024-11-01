@@ -22,7 +22,7 @@
 
 - [ ] M320 repetieren (Prüfung am Mittwoch, 6.11)
 - [ ] M320 repetieren (Prüfung am Mittwoch, 6.11)
-- [ ] JS einfache App (evtl. Tic Tac Toe)
-- [ ] JS einfache App (evtl. Tic Tac Toe)
+- [ ] LA_294_8422 Debugging
+- [ ] LA_294_8450 CodingStandards Teil 1
 
 ✍️ Heute habe ich... (50-100 Wörter)
