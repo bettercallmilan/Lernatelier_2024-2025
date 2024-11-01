@@ -9,7 +9,7 @@
 2. Welches der Module 346, 450, 294 scheint Ihnen besonders wichtig? Wo brauchen Sie am meisten Übung?
      Alle Module scheinen wichtig zu sein, vorallem 450. 294 möchte ich auch gut durcharbeiten, da es eine neue Sprache (JS) ist.
 3. Was wäre ein geeignetes Projekt für diese LP7? Würde sich dieses auch eignen, um es Ihrer Bewerbung hinzuzufügen?
-     Auf jeden Fall etwas mit JavaScript. Evtl. würde eine kleine Website Sinn machen - natürlich ist der Sinn davon JavaScript zu üben.
+     Auf jeden Fall etwas mit JavaScript. Evtl. würde eine kleine Website Sinn machen - der Sinn davon ist, JavaScript zu üben.
 
 ## 25.10
 
@@ -20,9 +20,18 @@
 
 ## 1.11
 
-- [ ] M320 repetieren (Prüfung am Mittwoch, 6.11)
-- [ ] M320 repetieren (Prüfung am Mittwoch, 6.11)
-- [ ] LA_294_8422 Debugging
-- [ ] LA_294_8450 CodingStandards Teil 1
+- [x] M320 repetieren (Prüfung am Mittwoch, 6.11)
+- [x] M320 repetieren (Prüfung am Mittwoch, 6.11)
+- [x] LA_294_8422 Debugging
+- [x] LA_294_8450 CodingStandards Teil 1
+
+✍️ Heute habe ich die beiden Aufträgen, die ich am letzten Donnerstag im Modul 294 nicht erledigen konnte, erledigen. Ich habe gelernt, wie man debuggt und die Coding Standards. Dazu habe ich noch im Modul 320 Sachen, die mir noch unklar waren, repetiert. Als Code habe ich die zwei .js Dateien hochgeladen, eine vor und eine nach meinem Debugging. (58 Wörter)
+
+## 8.11
+
+- [ ] JS-Projekt zur Ende realisieren
+- [ ] JS-Projekt (wahrscheinlich kleine Website, um JS zu üben)
+- [ ] JS-Projekt (wahrscheinlich kleine Website, um JS zu üben)
+- [ ] verbleibende Aufträge Modul (wird noch eingetragen)
 
 ✍️ Heute habe ich... (50-100 Wörter)
