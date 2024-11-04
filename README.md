@@ -29,9 +29,9 @@
 
 ## 8.11
 
-- [ ] JS-Projekt zur Ende realisieren
+- [ ] JS-Projekt zu Ende realisieren
 - [ ] JS-Projekt (wahrscheinlich kleine Website, um JS zu üben)
-- [ ] JS-Projekt (wahrscheinlich kleine Website, um JS zu üben)
-- [ ] verbleibende Aufträge Modul (wird noch eingetragen)
+- [ ] M346 LA_0703
+- [ ] M346 LA_0709
 
 ✍️ Heute habe ich... (50-100 Wörter)
