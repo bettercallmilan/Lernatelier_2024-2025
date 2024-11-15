@@ -29,9 +29,18 @@
 
 ## 8.11
 
-- [ ] JS-Projekt zu Ende realisieren
+- [x] JS-Projekt zu Ende realisieren
 - [ ] JS-Projekt (wahrscheinlich kleine Website, um JS zu üben)
-- [ ] M346 LA_0703
-- [ ] M346 LA_0709
+- [X] M346 LA_0703
+- [x] M346 LA_0709
+
+✍️ Heute habe ich mein JS-Projekt zu Ende realisiert. Ich habe mich für eine webbasierte Quiz-App (Multiple-Choice Fragen, Punktezählung) entschieden. Ich würde auch andere Funktionen die mir in den Sinn kommen hinzufügen. Ich konnte die beiden verbleibende Aufträge von Modul 346 lösen. Wegen der Zeit habe ich nicht mit dem JS-Projekt anfangen können. (52 Wörter)
+
+## 15.11
+
+- [ ] M450 LA_6910 Software Test Documentation
+- [ ] M450 LA_6920 Testarten
+- [ ] M294 LA_8429 CRUD Aufgabe 1-3
+- [ ] M294 LA_8460 Git
 
 ✍️ Heute habe ich... (50-100 Wörter)
