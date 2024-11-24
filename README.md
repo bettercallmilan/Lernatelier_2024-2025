@@ -34,13 +34,31 @@
 - [X] M346 LA_0703
 - [x] M346 LA_0709
 
-✍️ Heute habe ich mein JS-Projekt zu Ende realisiert. Ich habe mich für eine webbasierte Quiz-App (Multiple-Choice Fragen, Punktezählung) entschieden. Ich würde auch andere Funktionen die mir in den Sinn kommen hinzufügen. Ich konnte die beiden verbleibende Aufträge von Modul 346 lösen. Wegen der Zeit habe ich nicht mit dem JS-Projekt anfangen können. (52 Wörter)
+✍️ Heute habe ich mein JS-Projekt zu Ende realisiert. Ich habe mich für eine webbasierte To-Do Liste entschieden. Ich konnte die beiden verbleibende Aufträge von Modul 346 lösen. Wegen der Zeit habe ich nicht mit dem JS-Projekt anfangen können. (38 Wörter)
 
 ## 15.11
 
-- [ ] M450 LA_6910 Software Test Documentation
-- [ ] M450 LA_6920 Testarten
-- [ ] M294 LA_8429 CRUD Aufgabe 1-3
-- [ ] M294 LA_8460 Git
+- [x] M450 LA_6910 Software Test Documentation
+- [x] M450 LA_6920 Testarten
+- [x] M294 LA_8429 CRUD Aufgabe 1-3
+- [x] M294 LA_8460 Git
+
+✍️ Heute habe ich alle verbleibende Aufträge aus dem Modulen 294 und 450 lösen können. (14 Wörter)
+
+## 22.11
+
+- [x] M450 LA_6930 Unit Testing
+- [x] M450 LA_6931 Unit Testing: Code Coverage
+- [x] M294 LA_8045 Input validieren
+- [x] M294 LA_8443 Selenium
+
+✍️ Heute habe ich alle verbleibende Aufträge aus dem Modulen 294 und 450 lösen können. (14 Wörter)
+
+## 29.11
+
+- [ ] M346 Leistungsbeurteilung
+- [ ] M346 Leistungsbeurteilung
+- [ ] JS-Projekt (To-Do Liste SPA) Projekt erstellen
+- [ ] JS-Projekt (To-Do Liste SPA) Design erstellen
 
 ✍️ Heute habe ich... (50-100 Wörter)
