@@ -56,9 +56,18 @@
 
 ## 29.11
 
-- [ ] M346 Leistungsbeurteilung
-- [ ] M346 Leistungsbeurteilung
-- [ ] JS-Projekt (To-Do Liste SPA) Projekt erstellen
-- [ ] JS-Projekt (To-Do Liste SPA) Design erstellen
+- [x] M346 Leistungsbeurteilung
+- [x] M346 Leistungsbeurteilung
+- [x] JS-Projekt (To-Do Liste SPA) Projekt erstellen
+- [x] JS-Projekt (To-Do Liste SPA) Design erstellen
+
+✍️ Heute habe ich an der Leistungsbeurteilung des Moduls 346 gearbeitet. Ich konnte konzentriert arbeiten und bin gut vorangekommen, daher habe ich nur noch wenige Sachen übrig, die ich am Montag erledigen werden. Dazu habe ich auch noch mit dem JS-Projekt (eine SPA To-Do Liste) angefangen und bin auch gut vorangekommen. (50 Wörter)
+
+## 06.12
+
+- [ ] JS-Projekt Logik implementieren
+- [ ] JS-Projekt UI Design verb
+- [ ] M450 PR_450_6960 Qualitätssicherung
+- [ ] M450 LA_450_6960 Qualitätssicherung
 
 ✍️ Heute habe ich... (50-100 Wörter)
