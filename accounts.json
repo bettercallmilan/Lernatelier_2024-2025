@@ -1,0 +1,7 @@
+{
+	"test": {
+		"algo": "sha256",
+		"salt": "5e234f1eb00f268f8d131b1bbb90cc9f",
+		"hash": "547c62c6f1a6783d44812fab8dc78260ae0952382c6c406def376ffd100cf501"
+	}
+}
