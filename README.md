@@ -65,9 +65,19 @@
 
 ## 06.12
 
-- [ ] JS-Projekt Logik implementieren
-- [ ] JS-Projekt UI Design verb
-- [ ] M450 PR_450_6960 Qualitätssicherung
+- [x] JS-Projekt Logik implementieren
+- [x] JS-Projekt UI Design verb
+- [x] M450 PR_450_6960 Qualitätssicherung
 - [ ] M450 LA_450_6960 Qualitätssicherung
+
+✍️ Heute habe ich die Logik für mein JavaScript Projekt (ein SPA Task Manager) fertigestellt. Da es in Zusammenhang mit dem Modul 294 ist, habe ich den BBB JSON Backend Server 
+ als Datenbank für meine Applikation benutzt. Das hat alles gut funktioniert und ich konnte meine App fertigstellen. Dazu habe ich auch noch den Code auf mein GitHub hochgeladen. Nach dem bin ich die Präsentation PR_450_6960 vom Modul 450 durchgegangen. (69 Wörter)
+
+## 13.12
+
+- [ ] M347 LA_0005
+- [ ] M347 LA_1006 (+ Moodle-Test 1007)
+- [ ] M347 LA_4010 (mit PR_0008)
+- [ ] M347 LA_1013
 
 ✍️ Heute habe ich... (50-100 Wörter)
