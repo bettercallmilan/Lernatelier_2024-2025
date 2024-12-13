@@ -75,9 +75,16 @@
 
 ## 13.12
 
-- [ ] M347 LA_0005
+~~- [ ] M347 LA_0005~~
 - [ ] M347 LA_1006 (+ Moodle-Test 1007)
 - [ ] M347 LA_4010 (mit PR_0008)
 - [ ] M347 LA_1013
+
+✍️ Heute habe ich... (50-100 Wörter)
+
+## 20.12
+
+- [ ] AOC
+- [ ] AOC
 
 ✍️ Heute habe ich... (50-100 Wörter)
