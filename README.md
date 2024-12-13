@@ -75,12 +75,13 @@
 
 ## 13.12
 
-~~- [ ] M347 LA_0005~~
-- [ ] M347 LA_1006 (+ Moodle-Test 1007)
-- [ ] M347 LA_4010 (mit PR_0008)
-- [ ] M347 LA_1013
+- [ ] ~~M347 LA_0005~~
+- [ ] ~~M347 LA_1006 (+ Moodle-Test 1007)~~
+- [ ] ~~M347 LA_4010 (mit PR_0008)~~
+- [ ] ~~M347 LA_1013~~
+- [x] AOC
 
-✍️ Heute habe ich... (50-100 Wörter)
+✍️ Heute habe ich mit AOC angefangen und konnte alles bis Tag 4 (Tag 4 nur den ersten Teil) lösen. Angefangen habe ich mit Excel da es ziemlich einfach (und visuell) war, die Lösung rauszulesen. Nach dem zweiten Tag musste ich zu C# wechseln. Dazu habe ich noch die Sachen, die ich in Excel gemacht habe, in C# übertragen. Die Aufträge, die ich lösen wollte mache ich als Hausaufgabe. (68 Wörter)
 
 ## 20.12
 
