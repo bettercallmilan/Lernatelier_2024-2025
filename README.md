@@ -85,7 +85,7 @@
 
 ## 20.12
 
-- [ ] AOC
-- [ ] AOC
+- [x] AOC
+- [x] AOC
 
-✍️ Heute habe ich... (50-100 Wörter)
+✍️ Heute habe ich AOC gemacht. (5 Wörter)
