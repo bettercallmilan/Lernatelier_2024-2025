@@ -6,9 +6,9 @@ Idee für ein kleines Projekt: Beim herunterladen von LA-Dateien von Moodle muss
 
 ## 17.01
 
+- [ ] LB M450
 - [ ] Dateistruktur analysieren
 - [ ] Ordnerstruktur planen
 - [ ] Grundlegendes JavaScript-Skript entwickeln
-- [ ] Automatische Ordnererstellung implementieren
 
 ✍️ Heute habe ich...
