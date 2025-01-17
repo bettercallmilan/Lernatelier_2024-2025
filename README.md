@@ -6,9 +6,18 @@ Idee für ein kleines Projekt: Beim herunterladen von LA-Dateien von Moodle muss
 
 ## 17.01
 
-- [ ] LB M450
-- [ ] Dateistruktur analysieren
-- [ ] Ordnerstruktur planen
-- [ ] Grundlegendes JavaScript-Skript entwickeln
+- [x] LB M450
+- [x] Dateistruktur analysieren
+- [x] Ordnerstruktur planen
+- [x] Grundlegendes JavaScript-Skript entwickeln
+
+✍️ Heute habe ich an LB M450 gearbeitet, da ich letzte Woche im Unterricht nicht so weit gekommen bin. Ich habe auch noch mit meinem JS Projekt angefangen und den ersten Code hochgeladen.
+
+## 24.01
+
+- [ ] Dateisortierung umsetzen
+- [ ] Fehlerbehandlung hinzufügen
+- [ ] Sortierregeln erweitern
+- [ ] Automatisierung der Dateiauswahl implementieren
 
 ✍️ Heute habe ich...
