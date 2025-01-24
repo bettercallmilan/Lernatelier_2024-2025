@@ -1,0 +1,15 @@
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\bin\Debug\net8.0\caesar_shift.exe
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\bin\Debug\net8.0\caesar_shift.deps.json
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\bin\Debug\net8.0\caesar_shift.runtimeconfig.json
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\bin\Debug\net8.0\caesar_shift.dll
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\bin\Debug\net8.0\caesar_shift.pdb
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\caesar_shift.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\caesar_shift.AssemblyInfoInputs.cache
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\caesar_shift.AssemblyInfo.cs
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\caesar_shift.csproj.CoreCompileInputs.cache
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\caesar_shift.sourcelink.json
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\caesar_shift.dll
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\refint\caesar_shift.dll
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\caesar_shift.pdb
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\caesar_shift.genruntimeconfig.cache
+C:\Users\milan\Documents\GitHub\Lernatelier_2024-2025\caesar_shift\obj\Debug\net8.0\ref\caesar_shift.dll

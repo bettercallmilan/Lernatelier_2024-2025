@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "caesar_shift/1.0.0": {
+        "runtime": {
+          "caesar_shift.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "caesar_shift/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
