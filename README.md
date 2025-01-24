@@ -15,9 +15,18 @@ Idee für ein kleines Projekt: Beim herunterladen von LA-Dateien von Moodle muss
 
 ## 24.01
 
-- [ ] Dateisortierung umsetzen
-- [ ] Fehlerbehandlung hinzufügen
-- [ ] Sortierregeln erweitern
-- [ ] Automatisierung der Dateiauswahl implementieren
+- [x] Dateisortierung umsetzen
+- [x] Fehlerbehandlung hinzufügen
+- [x] Sortierregeln erweitern
+- [x] Automatisierung der Dateiauswahl implementieren
+
+✍️ Heute habe ich die aufgelisteten Arbeitspakete gelöst. Ich konnte die Dateisortierung umsetzen, Fehlerbehandlung hinzufügen, Sertierregelen erweitern und auch die Automatisierung der Dateiauswahl implementieren.
+
+## 31.01
+
+- [ ] mehrere Dateien auf einmal implementieren
+- [ ] Duplikaterkennung
+- [ ] Download-Überwachung
+- [ ] Logging
 
 ✍️ Heute habe ich...
