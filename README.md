@@ -24,9 +24,9 @@ Idee für ein kleines Projekt: Beim herunterladen von LA-Dateien von Moodle muss
 
 ## 31.01
 
-- [ ] mehrere Dateien auf einmal implementieren
-- [ ] Duplikaterkennung
-- [ ] Download-Überwachung
-- [ ] Logging
+- [x] mehrere Dateien auf einmal implementieren
+- [x] Duplikaterkennung
+- [x] Download-Überwachung
+- [x] Logging
 
-✍️ Heute habe ich...
+✍️ Heute habe ich in meinen Sorter die Funktion implementiert, die mehrere Dateien auf einmal sortiert. Dazu noch die Duplikaterkennung, die ständige Download-Überwachung und Logging.
