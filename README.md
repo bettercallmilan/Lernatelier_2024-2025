@@ -5,8 +5,14 @@
 ## Grob-Planung
 
 1. Welche Projekte haben Sie bereits auf Ihrem github, welche Sie verlinken könnten?
+   Meine "Milan's Lens" Website aus dem Modul 293, die Repository Lernatelier_2023-2024 mit einen grösseren (C# Kalender) und zwei kleineren Projekten (Taschenrechner, VALORANT Agent picker) und evtl. meine Website bettercallmilan.github.io (wird in diesem Modul neugemacht).
+   
 2. Wie sieht Ihr *skill portfolio* aus? Was können Sie bereits, und was wäre etwas, das Sie lernen möchten?
+   Kann: C#, HTML/CSS, JS, Docker, Web API (ASP.NET), MSSQL, OOP (C#), Testen.
+   Lernen: Python, C++ 
+   
 3. Was wäre ein gutes Projekt für die zweite Hälfte dieser Lern-Periode?
+   Ein grösseres Vorzeige-Projekt, evtl. etwas mit Frontend + Backend (mit SQL, Login; C# + HTML/CSS). 
 
 ## 21.2
 
