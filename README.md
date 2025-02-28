@@ -33,10 +33,10 @@
 
 ## 28.2
 
-- [ ] Projekte verlinken (Website)
-- [ ] LinkedIn-Profil erstellen / ausputzen
-- [ ] GitHub-Profil professionalisieren (`readme.md`)
-- [ ] Start-Seite: Was ist das dringendste AP?
+- [x] Projekte verlinken (Website)
+- [x] LinkedIn-Profil erstellen / ausputzen
+- [x] GitHub-Profil professionalisieren (`readme.md`)
+- [x] Start-Seite: Was ist das dringendste AP?
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
@@ -44,10 +44,9 @@
 
 ## 7.3
 
-- [ ] 
 - [ ] CV-Seite erstellen
-- [ ] Start-Seite 1
-- [ ] Start-Seite 2
+- [ ] Projektseite fertigstellen
+- [ ] Code/Website aufputzen
 - [ ] Rückmeldung geben.
 
 ✍️ Heute habe ich... (50-100 Wörter)
