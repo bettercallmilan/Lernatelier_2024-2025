@@ -12,7 +12,7 @@
    Lernen: Python, C++ 
    
 3. Was wäre ein gutes Projekt für die zweite Hälfte dieser Lern-Periode?
-   Ein grösseres Vorzeige-Projekt, evtl. etwas mit Frontend + Backend (mit SQL, Login; C# + HTML/CSS). 
+   Ein grösseres Vorzeige-Projekt, evtl. etwas mit Frontend + Backend (mit SQL, Login; C# + HTML/CSS). Edit bzw. Idee: Forum / Community-Plattform
 
 ## 21.2
 
@@ -38,28 +38,23 @@
 - [x] GitHub-Profil professionalisieren (`readme.md`)
 - [x] Start-Seite: Was ist das dringendste AP?
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, die angepasste Version Ihrer Start-Seite in der entsprechenden Ablage hochzuladen.
+✍️ Heute habe ich meine Projekte in der Website verlinkt, mein LinkedIn Profil erstellt und vervollständigt (dazu mit ein paar Leuten verbunden) und mein GitHub Profil verbessert.
 
 ## 7.3
 
-- [ ] CV-Seite erstellen
-- [ ] Projektseite fertigstellen
-- [ ] Code/Website aufputzen
-- [ ] Rückmeldung geben.
+- [x] CV-Seite erstellen
+- [x] Projektseite fertigstellen
+- [x] Code/Website aufputzen
+- [x] Rückmeldung geben
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, die fertige Version Ihrer Start-Seite in der entsprechenden Ablage hochzuladen.
+✍️ Heute habe ich meine Startseite fertiggestellt. Dazu konnte ich auch noch mein GitHub README.md-File verbessern. Nach dem Code aufputzen von der Website, machte ich den Rückmeldung-Teil indem ich 3 Personen aus meiner Klasse Feedback zu Website, LinkedIn Profil und GitHub Profil gab.
 
 ## 14.3
 
-- [ ] 
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [ ] Grundgerüst Forum Website
+- [ ] Benutzeranmeldung und Profilverwaltung
+- [ ] Beitragssystem
+- [ ] Kommentar- und Antwortsystem
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
