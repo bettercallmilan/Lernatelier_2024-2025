@@ -1,23 +1,18 @@
-// Grundlegendes Skript zur Ordnererstellung basierend auf Dateinamen
-
 const fs = require('fs');
 const path = require('path');
 
-// Verzeichnis, in dem die Dateien gespeichert werden sollen
 const baseDir = path.join(__dirname, 'Downloads');
 const moduleMapping = {
     'M295': 'Modul 295',
     'M300': 'Modul 300'
 };
 
-// Funktion zur Erstellung fehlender Ordner
 function ensureFolderExists(folder) {
     if (!fs.existsSync(folder)) {
         fs.mkdirSync(folder, { recursive: true });
     }
 }
 
-// Dateien analysieren und entsprechende Ordner erstellen
 fs.readdir(baseDir, (err, files) => {
     if (err) {
         console.error('Fehler beim Lesen des Verzeichnisses:', err);
@@ -34,8 +29,6 @@ fs.readdir(baseDir, (err, files) => {
     });
 });
 
-// Erweiterung des Skripts um Dateisortierung
-
 const fs = require('fs');
 const path = require('path');
 
@@ -51,7 +44,6 @@ function ensureFolderExists(folder) {
     }
 }
 
-// Dateien analysieren und in die richtigen Ordner verschieben
 fs.readdir(baseDir, (err, files) => {
     if (err) {
         console.error('Fehler beim Lesen des Verzeichnisses:', err);
@@ -78,8 +70,6 @@ fs.readdir(baseDir, (err, files) => {
     });
 });
 
-// Hinzufügen eines einfachen UI (z.B. Konsolenausgabe zur Statusanzeige)
-
 const fs = require('fs');
 const path = require('path');
 
@@ -95,7 +85,6 @@ function ensureFolderExists(folder) {
     }
 }
 
-// Dateien analysieren und in die richtigen Ordner verschieben
 fs.readdir(baseDir, (err, files) => {
     if (err) {
         console.error('Fehler beim Lesen des Verzeichnisses:', err);
@@ -124,8 +113,6 @@ fs.readdir(baseDir, (err, files) => {
     console.log('Dateisortierung abgeschlossen.');
 });
 
-// Finales Skript mit verbesserten Funktionen und Kommentaren
-
 const fs = require('fs');
 const path = require('path');
 
@@ -133,7 +120,6 @@ const baseDir = path.join(__dirname, 'Downloads');
 const moduleMapping = {
     'M295': 'Modul 295',
     'M300': 'Modul 300',
-    // Weitere Module hier hinzufügen
 };
 
 function ensureFolderExists(folder) {
@@ -142,7 +128,6 @@ function ensureFolderExists(folder) {
     }
 }
 
-// Dateien analysieren und in die richtigen Ordner verschieben
 fs.readdir(baseDir, (err, files) => {
     if (err) {
         console.error('Fehler beim Lesen des Verzeichnisses:', err);
