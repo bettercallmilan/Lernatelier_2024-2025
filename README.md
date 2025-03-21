@@ -12,7 +12,7 @@
    Lernen: Python, C++ 
    
 3. Was wäre ein gutes Projekt für die zweite Hälfte dieser Lern-Periode?
-   Ein grösseres Vorzeige-Projekt, evtl. etwas mit Frontend + Backend (mit SQL, Login; C# + HTML/CSS). Edit bzw. Idee: Forum / Community-Plattform
+   Ein grösseres Vorzeige-Projekt, evtl. etwas mit Frontend + Backend (mit SQL, Login; C# + HTML/CSS). Edit bzw. Idee: Discord Economy Bot (Zusammenarbeit mit Florian Ruby und David Koteski)
 
 ## 21.2
 
@@ -51,11 +51,18 @@
 
 ## 14.3
 
-- [ ] Grundgerüst Forum Website
-- [ ] Benutzeranmeldung und Profilverwaltung
-- [ ] Beitragssystem
-- [ ] Kommentar- und Antwortsystem
+- [x] Projektplanung erstellen
+- [x] Anforderungen dokumentieren
+- [x] Discord Bot registrieren
+- [x] Grundstruktur aufbauen
+
+✍️ Heute habe ich die Grundlagen für meinen Discord Economy Bot geschaffen. Ich habe die Projektplanung erstellt, alle Anforderungen dokumentiert, den Bot im Discord Portal registriert und die Grundstruktur aufgebaut. Nun kann ich mit der Implementierung der eigentlichen Wirtschaftsfunktionen beginnen.
+
+## 21.3
+
+- [ ] Datenbank einrichten
+- [ ] Währungssystem programmieren
+- [ ] Befehlsstruktur implementieren
+- [ ] Benutzerprofile erstellen
 
 ✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, einen ersten Code Ihres Projektes in dieser Ablage hochzuladen.
