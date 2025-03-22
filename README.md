@@ -60,9 +60,18 @@
 
 ## 21.3
 
-- [ ] Datenbank einrichten
-- [ ] Währungssystem programmieren
-- [ ] Befehlsstruktur implementieren
-- [ ] Benutzerprofile erstellen
+- [x] Datenbank einrichten
+- [x] Währungssystem programmieren
+- [x] Befehlsstruktur implementieren
+- [x] Benutzerprofile erstellen
 
-✍️ Heute habe ich... (50-100 Wörter)
+✍️ Heute habe ich die Struktur unseres Discord Economy Bots deutlich verbessert. Ich habe eine Datenbank für Benutzerkonten eingerichtet (json), das Währungssystem mit Wallet und Bank programmiert, eine modulare Befehlsstruktur mit Cogs implementiert und die Grundlage für Benutzerprofile geschaffen. Der Bot ist jetzt viel organisierter und leichter erweiterbar.
+
+## 28.3
+
+- [ ] Shop-System entwickeln
+- [ ] Tägliche Belohnungen einführen
+- [ ] Embed integrieren in alle repsonses
+- [ ] Inventarsystem erstellen
+
+✍️ Heute habe ich...
