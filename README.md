@@ -69,9 +69,18 @@
 
 ## 28.3
 
-- [ ] Shop-System entwickeln
-- [ ] Tägliche Belohnungen einführen
-- [ ] Embed integrieren in alle repsonses
-- [ ] Inventarsystem erstellen
+- [x] Shop-System entwickeln
+- [x] Tägliche Belohnungen einführen
+- [x] Embed integrieren in alle repsonses
+- [x] Inventarsystem erstellen
+
+✍️ Heute habe ich das Shop-System für meinen Discord Bot entwickelt, sodass Benutzer Items kaufen können. Zusätzlich implementierte ich tägliche Belohnungen, um Benutzer zu motivieren. Alle Bot-Antworten wurden mit Embeds aufgewertet, um die Benutzeroberfläche ansprechender zu gestalten. Parallel dazu erstellte ich ein Inventarsystem, das es Nutzern ermöglicht, gesammelte Items zu verwalten.
+
+## 4.4
+
+- [ ] Administratorrechte definieren
+- [ ] Levelup-Mechanismus implementieren
+- [ ] Code aufputzen
+- [ ] Repositories verlinken (Vorzeige-Projekt/Discord Bot hier vorzeigen)
 
 ✍️ Heute habe ich...
