@@ -78,9 +78,9 @@
 
 ## 4.4
 
-- [ ] Administratorrechte definieren
-- [ ] Levelup-Mechanismus implementieren
-- [ ] Code aufputzen
-- [ ] Repositories verlinken (Vorzeige-Projekt/Discord Bot hier vorzeigen)
+- [x] Administratorrechte definieren
+- [x] Levelup-Mechanismus implementieren
+- [x] Code aufputzen
+- [x] Repositories verlinken (Vorzeige-Projekt/Discord Bot hier vorzeigen)
 
-✍️ Heute habe ich...
+✍️ Heute habe ich Administratorrechte für den Discord Bot definiert, damit Serveradmins Einstellungen anpassen können. Ausserdem entwickelte ich mehrere Minispiele, mit denen Nutzer Münzen verdienen können. Zuletzt implementierte ich mit Florian einen Levelup-Mechanismus, der Aktivität belohnt und zusätzliche Funktionen freischaltet.
