@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}Aufgaben - Haushaltsplaner{% endblock %}
+
+{% block content %}
+    <h2>Aufgaben</h2>
+    
+    <form method="post" class="add-form">
+        <h3>Neue Aufgabe</h3>
+        <div class="form-group">
+            <label for="title">Titel*</label>
+            <input type="text" name="title" id="title" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="description">Beschreibung</label>
+            <textarea name="description" id="description"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="due_date">Fälligkeitsdatum</label>
+            <input type="date" name="due_date" id="due_date">
+        </div>
+        
+        <div class="form-group">
+            <label for="assigned_to">Zugewiesen an</label>
+            <select name="assigned_to" id="assigned_to">
+                <option value="">Nicht zugewiesen</option>
+                {% for user in users %}
+                    <option value="{{ user['id'] }}">{{ user['username'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <button type="submit" class="button">Aufgabe erstellen</button>
+    </form>
+    
+    <div class="task-list">
+        <h3>Aufgaben-Liste</h3>
+        {% if tasks %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aufgabe</th>
+                        <th>Zugewiesen</th>
+                        <th>Fällig am</th>
+                        <th>Status</th>
+                        <th>Aktion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for task in tasks %}
+                        <tr class="task-status-{{ task['status'] }}">
+                            <td>
+                                <strong>{{ task['title'] }}</strong>
+                                {% if task['description'] %}
+                                    <p>{{ task['description'] }}</p>
+                                {% endif %}
+                            </td>
+                            <td>{{ task['username'] or 'Nicht zugewiesen' }}</td>
+                            <td>{{ task['due_date'] or 'Kein Datum' }}</td>
+                            <td>{{ task['status'] }}</td>
+                            <td>
+                                <form method="post" action="{{ url_for('update_task_status', id=task['id']) }}">
+                                    <select name="status" onchange="this.form.submit()">
+                                        <option value="offen" {% if task['status'] == 'offen' %}selected{% endif %}>Offen</option>
+                                        <option value="in Bearbeitung" {% if task['status'] == 'in Bearbeitung' %}selected{% endif %}>In Bearbeitung</option>
+                                        <option value="erledigt" {% if task['status'] == 'erledigt' %}selected{% endif %}>Erledigt</option>
+                                    </select>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Keine Aufgaben vorhanden.</p>
+        {% endif %}
+    </div>
+{% endblock %}

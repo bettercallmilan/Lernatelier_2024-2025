@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Einkaufsliste - Haushaltsplaner{% endblock %}
+
+{% block content %}
+    <h2>Einkaufsliste</h2>
+    
+    <form method="post" class="add-form">
+        <h3>Neuer Artikel</h3>
+        <div class="form-group">
+            <label for="name">Artikel*</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="quantity">Menge</label>
+            <input type="text" name="quantity" id="quantity">
+        </div>
+        
+        <div class="form-group">
+            <label for="added_by">Hinzugefügt von</label>
+            <select name="added_by" id="added_by">
+                <option value="">Anonym</option>
+                {% for user in users %}
+                    <option value="{{ user['id'] }}">{{ user['username'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <button type="submit" class="button">Hinzufügen</button>
+    </form>
+    
+    <div class="shopping-list">
+        <h3>Einkaufsliste</h3>
+        {% if shopping_items %}
+            <ul class="shopping-items">
+                {% for item in shopping_items %}
+                    <li class="{% if item['completed'] %}completed{% endif %}">
+                        <form method="post" action="{{ url_for('toggle_shopping_item', id=item['id']) }}">
+                            <input type="checkbox" onchange="this.form.submit()" {% if item['completed'] %}checked{% endif %}>
+                            <span class="item-name">{{ item['name'] }}</span>
+                            {% if item['quantity'] %}
+                                <span class="item-quantity">({{ item['quantity'] }})</span>
+                            {% endif %}
+                            <span class="item-added-by">
+                                Hinzugefügt von: {{ item['username'] or 'Anonym' }}
+                            </span>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Keine Artikel auf der Einkaufsliste.</p>
+        {% endif %}
+    </div>
+{% endblock %}
