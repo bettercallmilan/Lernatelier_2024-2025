@@ -9,16 +9,15 @@
 2. Welche Datenbank-Technologie möchten Sie üben? Fühlen Sie sich sicher mit SQL und möchten etwas Neues ausprobieren; oder möchten Sie sich weiter mit SQL beschäftigen?
    Ich möchte bei SQL bleiben, da sich der nächste Modul sowieso mit NoSQL befasst. Ich finde, ich kann viel strukturierter mit dem Modul lernen.
 3. Was wäre ein geeignetes Abschluss-Projekt?
-   Ein Haushaltsorganisations-Tool, indem Familienmitglieder Aufgaben fair verteilt bekommen, darunter auch Benachrichtigungen.
+   Ein Haushaltsorganisations-Tool, indem Familienmitglieder Aufgaben fair verteilt bekommen, darunter auch Benachrichtigungen. Dazu kommt noch eine gemeinsame Einkaufsliste.
 
 ## 25.4
 
 Welche 3 *features* sind die wichtigsten Ihres Projektes? Wie können Sie die Machbarkeit dieser in jeweils 45' am einfachsten beweisen?
 
-- [ ] *make or break feature* 1:
-- [ ] *make or break feature* 2:
-- [ ] *make or break feature* 3:
-
+- [ ] *make or break feature* 1: Aufgabenmanagement
+- [ ] *make or break feature* 2: Erinnerungssystem
+- [ ] *make or break feature* 3: Gemeinsame Einkaufsliste
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
