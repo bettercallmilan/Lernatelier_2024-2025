@@ -1,3 +1,68 @@
+# Fertiges Projekt: Discord Economy Bot
+
+## Projektbeschreibung
+Der Discord Economy Bot ist ein vielseitiger Bot für Discord-Server, der ein virtuelles Währungssystem implementiert. Benutzer können Geld verdienen, sparen, ausgeben und durch verschiedene Aktivitäten und Minispiele interagieren. Der Bot wurde in Python mit der discord.py-Bibliothek entwickelt und bietet eine modulare Struktur, die leicht erweiterbar ist.
+
+## Hauptfunktionen
+
+### Wirtschaftssystem
+- **Währungsverwaltung**: Benutzer können ihren Kontostand überprüfen (`-balance`), Geld von ihrer Wallet auf ihr Bankkonto einzahlen (`-deposit`) oder abheben (`-withdraw`)
+- **Tägliche Belohnungen**: Benutzer können regelmäßig Geld verdienen durch den `-beg`-Befehl mit einem 24-Stunden-Cooldown
+
+### Job-System
+- **Jobmarkt**: Verfügbare Jobs können durchsucht werden (`-jobs`)
+- **Job-Management**: Benutzer können Jobs kaufen (`-buyjob`), entfernen (`-removejob`) und ihre aktuellen Jobs anzeigen (`-myjobs`)
+- **Arbeitssimulation**: Mit dem `-work`-Befehl können Benutzer ihre Jobs ausführen und Geld verdienen
+
+### Glücksspiel
+- **Gambling**: Benutzer können mit ihren Münzen spielen (`-gamble`) und versuchen, ihren Kontostand zu erhöhen
+
+### Level-System
+- **Fortschritts-Tracking**: Benutzer erhalten für ihre Aktivitäten Erfahrungspunkte
+- **Levelaufstiege**: Mit steigendem Level werden neue Funktionen und Boni freigeschaltet
+
+### Admin-Funktionen
+- **Serveradministration**: Serveradmins können Bot-Einstellungen anpassen und die Wirtschaft überwachen
+
+### Sonstiges
+- **Fun-Befehle**: Verschiedene Unterhaltungsbefehle (`-david`, `-geschichte`, etc.)
+- **Informationen**: Bot-Informationen und Hilfe können mit `-info` und `-help` abgerufen werden
+
+## Technische Umsetzung
+Der Bot ist in einer modularen Struktur mit verschiedenen "Cogs" organisiert:
+- **EconomyCog**: Basiswirtschaftsfunktionen
+- **JobMarketCog**: Job-bezogene Befehle und Funktionalität
+- **GamblingCog**: Glücksspielfunktionen
+- **LevelsCog**: Level-System und Fortschritt
+- **AdminCog**: Administrative Befehle
+- **OtherCog**: Unterhaltungs- und sonstige Funktionen
+- **LastFMCog**: Integration mit Last.fm-Diensten
+
+Alle Bot-Antworten wurden mit ansprechenden Discord-Embeds gestaltet, die die Benutzeroberfläche verbessern.
+
+## Datenmanagement
+Benutzerdaten werden in einer JSON-Datenbank gespeichert, die Folgendes für jeden Benutzer verwaltet:
+- Wallet- und Bankguthaben
+- Inventar und gekaufte Items
+- Aktuelle Jobs
+- Level und Erfahrungspunkte
+- Cooldown-Zeiten für verschiedene Aktivitäten
+
+## Team und Zusammenarbeit
+Dieses Projekt wurde in Zusammenarbeit mit Florian Ruby und David Koteski entwickelt. Die gemeinsame Arbeit hat es ermöglicht, einen funktionsreichen Bot zu erstellen, der verschiedene Wirtschafts- und Unterhaltungsaspekte kombiniert.
+
+## Zukunftspläne
+Der Bot kann in Zukunft erweitert werden mit:
+- Mehr Minispielen und Verdienstmöglichkeiten
+- Einem Shop-System mit mehr Items
+- Server-spezifischen Einstellungen
+- Weiteren Benutzerstatistiken
+- Verbesserter Benutzerinteraktion
+
+## Links
+- GitHub Repository: [IM23d/discord-balance-bot](https://github.com/IM23d/discord-balance-bot)
+
+
 # Lern-Periode 9
 
 21.2 bis 4.4
