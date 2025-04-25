@@ -5,8 +5,11 @@
 ## Grob-Planung
 
 1. Welche Programmiersprache möchten Sie verwenden? Was denken Sie, wo Ihre Zeit und Übung am sinnvollsten ist?
-1. Welche Datenbank-Technologie möchten Sie üben? Fühlen Sie sich sicher mit SQL und möchten etwas Neues ausprobieren; oder möchten Sie sich weiter mit SQL beschäftigen?
-1. Was wäre ein geeignetes Abschluss-Projekt?
+   Ich möchte etwas mit Python machen, da ich da am meisten Übung brauche. Ich finde Python eine coole Programmiersprache, die viele Möglichkeiten bieten, deswegen möchte ich meine Zeit und Übung darin investieren.
+2. Welche Datenbank-Technologie möchten Sie üben? Fühlen Sie sich sicher mit SQL und möchten etwas Neues ausprobieren; oder möchten Sie sich weiter mit SQL beschäftigen?
+   Ich möchte bei SQL bleiben, da sich der nächste Modul sowieso mit NoSQL befasst. Ich finde, ich kann viel strukturierter mit dem Modul lernen.
+3. Was wäre ein geeignetes Abschluss-Projekt?
+   Ein Haushaltsorganisations-Tool, indem Familienmitglieder Aufgaben fair verteilt bekommen, darunter auch Benachrichtigungen.
 
 ## 25.4
 
