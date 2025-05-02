@@ -15,22 +15,21 @@
 
 Welche 3 *features* sind die wichtigsten Ihres Projektes? Wie können Sie die Machbarkeit dieser in jeweils 45' am einfachsten beweisen?
 
-- [ ] *make or break feature* 1: Aufgabenmanagement
-- [ ] *make or break feature* 2: Erinnerungssystem
-- [ ] *make or break feature* 3: Gemeinsame Einkaufsliste
+- [x] *make or break feature* 1: Aufgabenmanagement
+- [x] *make or break feature* 2: Erinnerungssystem
+- [x] *make or break feature* 3: Gemeinsame Einkaufsliste
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, den Code von heute auf github hochzuladen. Ggf. bietet es sich an, für die Code-Schnipsel einen eigenen Ordner `exploration` zu erstellen.
+✍️ Heute habe ich einen explorativen Prototyp für ein Haushaltsorganisations-Tool mit Python, Flask und SQLite erstellt. Nach anfänglichen Kompatibilitätsproblemen mit Flask und Werkzeug konnte ich die Anwendung erfolgreich zum Laufen bringen. Ich habe gelernt, dass SQLite eine einfache, dateibasierte Datenbank ist, die sich perfekt für Prototypen eignet und keinen separaten Datenbankserver wie SQL Express benötigt. Die grundlegenden CRUD-Operationen für Aufgaben und Einkaufsliste funktionieren, und die ersten Tests verliefen erfolgreich.
 
 ## 2.5
 
 Ausgehend von Ihren Erfahrungen vom 25.4, welche *features* brauchen noch mehr Recherche? (Sie können auch mehrere AP für ein *feature* aufwenden.)
+Erinnerungssystem
 
-- [ ] ... (📵)
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [ ] Verbesserung Erinnerungssystem (mit tatsächlichen Benachrichtigungen statt nur Anzeige)
+- [ ] Exploration Wiederholungsmustern für regelmässige Aufgaben
+- [ ] Exploration einfacher Authentifizierungsmethoden ohne komplexe Benutzerprofile
+- [ ] UI und Struktur designen (📵)
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
