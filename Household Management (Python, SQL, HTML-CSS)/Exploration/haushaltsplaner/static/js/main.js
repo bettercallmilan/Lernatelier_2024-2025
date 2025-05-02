@@ -1,7 +1,4 @@
-// Einfaches JavaScript für Interaktivität
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Beispiel: Hervorheben von überfälligen Aufgaben
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     
