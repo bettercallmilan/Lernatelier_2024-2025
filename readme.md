@@ -26,12 +26,12 @@ Welche 3 *features* sind die wichtigsten Ihres Projektes? Wie können Sie die Ma
 Ausgehend von Ihren Erfahrungen vom 25.4, welche *features* brauchen noch mehr Recherche? (Sie können auch mehrere AP für ein *feature* aufwenden.)
 Erinnerungssystem
 
-- [ ] Verbesserung Erinnerungssystem (mit tatsächlichen Benachrichtigungen statt nur Anzeige)
-- [ ] Exploration Wiederholungsmustern für regelmässige Aufgaben
-- [ ] Exploration einfacher Authentifizierungsmethoden ohne komplexe Benutzerprofile
-- [ ] UI und Struktur designen (📵)
+- [x] Verbesserung Erinnerungssystem (mit tatsächlichen Benachrichtigungen statt nur Anzeige)
+- [x] Exploration Wiederholungsmustern für regelmässige Aufgaben
+- [x] Exploration einfacher Authentifizierungsmethoden ohne komplexe Benutzerprofile
+- [x] UI und Struktur designen (📵)
 
-✍️ Heute habe ich... (50-100 Wörter)
+✍️ Heute habe ich mithilfe von win11toast den Erinnerungssystem besser kennenlernen. Ich konnte erfolgreich lokale Windows-Benachrichtigungen erstellen, die für mein Haushaltsorganisations-Tool geeignet sind. (50-100 Wörter)
 
 ☝️ Vergessen Sie nicht, den Code von heute auf github hochzuladen.
 
@@ -39,15 +39,15 @@ Erinnerungssystem
 
 Planen Sie nun Ihr Projekt, sodass die *Kern-Funktionalität* in 3 Sitzungen realisiert ist. Schreiben Sie dazu zunächst 3 solche übergeordneten Kern-Funktionalitäten auf: 
 
-1. Kern-Funktionalität
-2. Kern-Funktionalität
-3. Kern-Funktionalität
+1. Kern-Funktionalität: Aufgabenmanagement (+ gemeinsame Einkaufsliste)
+2. Kern-Funktionalität: Erinnerungssystem
+3. Kern-Funktionalität: Authentifizierungssystem
 
 Diese Kern-Funktionalitäten brechen Sie nun in etwa 4 AP je herunter. Versuchen Sie jetzt bereits, auch die Sitzung vom 16.5 und 23.5 zu planen (im Wissen, dass Sie kleine Anpassungen an Ihrer Planung vornehmen können).
 
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [ ] Datenmodell für Aufgaben und Einkaufslisten-Items erstellen (mit SQLite)
+- [ ] CRUD-Funktionalität für Aufgaben implementieren (Erstellen, Lesen, Aktualisieren, Löschen)
+- [ ] CRUD-Funktionalität für Einkaufslisten-Items implementieren
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
