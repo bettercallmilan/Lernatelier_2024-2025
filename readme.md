@@ -45,7 +45,7 @@ Planen Sie nun Ihr Projekt, sodass die *Kern-Funktionalität* in 3 Sitzungen rea
 
 Diese Kern-Funktionalitäten brechen Sie nun in etwa 4 AP je herunter. Versuchen Sie jetzt bereits, auch die Sitzung vom 16.5 und 23.5 zu planen (im Wissen, dass Sie kleine Anpassungen an Ihrer Planung vornehmen können).
 
-- [ ] Datenmodell für Aufgaben und Einkaufslisten-Items erstellen (mit SQLite)
+- [ ] Datenmodell für Aufgaben und Einkaufslisten-Items erstellen (mit mongoDB)
 - [ ] CRUD-Funktionalität für Aufgaben implementieren (Erstellen, Lesen, Aktualisieren, Löschen)
 - [ ] CRUD-Funktionalität für Einkaufslisten-Items implementieren
 
