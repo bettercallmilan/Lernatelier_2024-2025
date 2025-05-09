@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haushaltsplaner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Haushaltsplaner</h1>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Start</a></li>
+                <li><a href="/tasks">Aufgaben</a></li>
+                <li><a href="/shopping">Einkaufsliste</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Haushaltsplaner</h2>
+            <p>Aufgaben & Einkaufsliste</p>
+        </section>
+
+        <div class="cards-container">
+            <div class="card">
+                <h3>Aufgaben</h3>
+                <p>Tägliche und wöchentliche Aufgaben im Haushalt</p>
+                <a href="/tasks" class="button">Zu den Aufgaben</a>
+            </div>
+
+            <div class="card">
+                <h3>Einkaufsliste</h3>
+                <p>Gemeinsame Einkaufslisten</p>
+                <a href="/shopping" class="button">Zur Einkaufsliste</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

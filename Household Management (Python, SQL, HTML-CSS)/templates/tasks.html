@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgaben - Haushaltsplaner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Haushaltsplaner</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Start</a></li>
+                <li><a href="/tasks" class="active">Aufgaben</a></li>
+                <li><a href="/shopping">Einkaufsliste</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Aufgaben</h2>
+            <button id="showFormBtn" class="button">Neue Aufgabe</button>
+        </section>
+
+        <section id="taskForm" class="form-container" style="display: none;">
+            <h3 id="formTitle">Neue Aufgabe hinzufügen</h3>
+            <form action="/tasks/create" method="post" id="taskItemForm">
+                <input type="hidden" id="task_id" name="task_id">
+                <div class="form-group">
+                    <label for="title">Titel:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Beschreibung:</label>
+                    <textarea id="description" name="description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="due_date">Fälligkeitsdatum:</label>
+                    <input type="date" id="due_date" name="due_date">
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priorität:</label>
+                    <select id="priority" name="priority">
+                        <option value="low">Niedrig</option>
+                        <option value="medium" selected>Mittel</option>
+                        <option value="high">Hoch</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="button">Speichern</button>
+                    <button type="button" id="cancelBtn" class="button button-secondary">Abbrechen</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-container">
+            {% if tasks|length > 0 %}
+                <ul class="task-list">
+                    {% for task in tasks %}
+                    <li class="task-item {% if task.completed %}completed{% endif %} priority-{{ task.priority }}">
+                        <div class="task-content">
+                            <h4>{{ task.title }}</h4>
+                            {% if task.description %}
+                            <p>{{ task.description }}</p>
+                            {% endif %}
+                            <div class="task-meta">
+                                {% if task.due_date %}
+                                <span>Fällig: {{ task.due_date }}</span>
+                                {% endif %}
+                                <span>Priorität: {{ task.priority }}</span>
+                            </div>
+                        </div>
+                        <div class="task-actions">
+                            <form action="/tasks/{{ task._id }}/toggle" method="post" style="display:inline">
+                                <button type="submit" class="icon-button">
+                                    {% if task.completed %}&#9745;{% else %}&#9744;{% endif %}
+                                </button>
+                            </form>
+                            <button type="button" class="icon-button edit-btn" 
+                                data-id="{{ task._id }}" 
+                                data-title="{{ task.title }}" 
+                                data-description="{{ task.description }}" 
+                                data-due-date="{{ task.due_date }}"
+                                data-priority="{{ task.priority }}">
+                                ✏️
+                            </button>
+                            <form action="/tasks/{{ task._id }}/delete" method="post" style="display:inline">
+                                <button type="submit" class="icon-button" onclick="return confirm('Wirklich löschen?')">&#128465;</button>
+                            </form>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-items">Keine Aufgaben vorhanden.</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('showFormBtn').addEventListener('click', function() {
+            resetForm();
+            document.getElementById('formTitle').textContent = 'Neue Aufgabe hinzufügen';
+            document.getElementById('taskItemForm').action = '/tasks/create';
+            document.getElementById('taskForm').style.display = 'block';
+        });
+
+        document.getElementById('cancelBtn').addEventListener('click', function() {
+            document.getElementById('taskForm').style.display = 'none';
+        });
+
+        const editBtns = document.querySelectorAll('.edit-btn');
+        editBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                const title = this.getAttribute('data-title');
+                const description = this.getAttribute('data-description');
+                const dueDate = this.getAttribute('data-due-date');
+                const priority = this.getAttribute('data-priority');
+                
+                document.getElementById('task_id').value = id;
+                document.getElementById('title').value = title;
+                document.getElementById('description').value = description || '';
+                document.getElementById('due_date').value = dueDate || '';
+                
+                const prioritySelect = document.getElementById('priority');
+                for (let i = 0; i < prioritySelect.options.length; i++) {
+                    if (prioritySelect.options[i].value === priority) {
+                        prioritySelect.selectedIndex = i;
+                        break;
+                    }
+                }
+                
+                document.getElementById('formTitle').textContent = 'Aufgabe bearbeiten';
+                document.getElementById('taskItemForm').action = '/tasks/' + id + '/update';
+                document.getElementById('taskForm').style.display = 'block';
+            });
+        });
+
+        function resetForm() {
+            document.getElementById('task_id').value = '';
+            document.getElementById('title').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('due_date').value = '';
+            document.getElementById('priority').selectedIndex = 1;
+        }
+    </script>
+</body>
+</html>

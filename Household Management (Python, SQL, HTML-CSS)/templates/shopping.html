@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufsliste - Haushaltsplaner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Haushaltsplaner</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Start</a></li>
+                <li><a href="/tasks">Aufgaben</a></li>
+                <li><a href="/shopping" class="active">Einkaufsliste</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Einkaufsliste</h2>
+            <button id="showFormBtn" class="button">Neuer Artikel</button>
+        </section>
+
+                <section id="shoppingForm" class="form-container" style="display: none;">
+            <h3 id="formTitle">Neuen Artikel hinzufügen</h3>
+            <form action="/shopping/create" method="post" id="shoppingItemForm">
+                <input type="hidden" id="item_id" name="item_id">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Menge:</label>
+                    <input type="text" id="quantity" name="quantity">
+                </div>
+                <div class="form-group">
+                    <label for="category">Kategorie:</label>
+                    <input type="text" id="category" name="category" value="Allgemein">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="button">Speichern</button>
+                    <button type="button" id="cancelBtn" class="button button-secondary">Abbrechen</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-container">
+            {% if items|length > 0 %}
+                <form action="/shopping/clear-purchased" method="post" class="clear-form">
+                    <button type="submit" class="button button-secondary">Gekaufte Artikel löschen</button>
+                </form>
+                
+                <ul class="shopping-list">
+                    {% for item in items %}
+                    <li class="shopping-item {% if item.purchased %}purchased{% endif %}">
+                        <div class="item-content">
+                            <h4>{{ item.name }}</h4>
+                            <div class="item-meta">
+                                {% if item.quantity %}
+                                <span>Menge: {{ item.quantity }}</span>
+                                {% endif %}
+                                <span>Kategorie: {{ item.category }}</span>
+                            </div>
+                        </div>
+                                                <div class="item-actions">
+                            <form action="/shopping/{{ item._id }}/toggle" method="post" style="display:inline">
+                                <button type="submit" class="icon-button">
+                                    {% if item.purchased %}&#9745;{% else %}&#9744;{% endif %}
+                                </button>
+                            </form>
+                            <button type="button" class="icon-button edit-btn" 
+                                data-id="{{ item._id }}" 
+                                data-name="{{ item.name }}" 
+                                data-quantity="{{ item.quantity }}" 
+                                data-category="{{ item.category }}">
+                                ✏️
+                            </button>
+                            <form action="/shopping/{{ item._id }}/delete" method="post" style="display:inline">
+                                <button type="submit" class="icon-button" onclick="return confirm('Wirklich löschen?')">&#128465;</button>
+                            </form>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-items">Keine Artikel vorhanden</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('showFormBtn').addEventListener('click', function() {
+            document.getElementById('shoppingForm').style.display = 'block';
+        });
+
+        document.getElementById('cancelBtn').addEventListener('click', function() {
+            document.getElementById('shoppingForm').style.display = 'none';
+        });
+
+        const editBtns = document.querySelectorAll('.edit-btn');
+        editBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                const name = this.getAttribute('data-name');
+                const quantity = this.getAttribute('data-quantity');
+                const category = this.getAttribute('data-category');
+                
+                document.getElementById('item_id').value = id;
+                document.getElementById('name').value = name;
+                document.getElementById('quantity').value = quantity || '';
+                document.getElementById('category').value = category;
+                
+                document.getElementById('formTitle').textContent = 'Artikel bearbeiten';
+                document.getElementById('shoppingItemForm').action = '/shopping/' + id + '/update';
+                document.getElementById('shoppingForm').style.display = 'block';
+            });
+        });
+
+        function resetForm() {
+            document.getElementById('item_id').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('quantity').value = '';
+            document.getElementById('category').value = 'Allgemein';
+        }
+    </script>
+</body>
+</html>
