@@ -30,8 +30,8 @@ CREATE TABLE shopping_items (
 
 INSERT INTO users (username) VALUES ('Anna'), ('Max');
 INSERT INTO tasks (title, description, status, assigned_to) 
-VALUES ('Müll rausbringen', 'Schwarze Tonne am Dienstag', 'offen', 1),
-       ('Bad putzen', 'Wöchentliche Reinigung', 'offen', 2);
+VALUES ('Muell rausbringen', 'Schwarze Tonne am Dienstag', 'offen', 1),
+       ('Bad putzen', 'Woechentliche Reinigung', 'offen', 2);
 INSERT INTO shopping_items (name, quantity, added_by)
 VALUES ('Milch', '1 Liter', 1),
        ('Brot', '1 Stück', 2);

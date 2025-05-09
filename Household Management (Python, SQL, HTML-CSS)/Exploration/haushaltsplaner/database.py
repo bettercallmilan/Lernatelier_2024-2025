@@ -13,4 +13,4 @@ def init_db():
             conn.executescript(f.read())
         conn.commit()
         conn.close()
-        print("Datenbank initialisiert!")
+        print("Datenbank initialisiert")
