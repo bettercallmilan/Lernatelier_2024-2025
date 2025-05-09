@@ -31,9 +31,7 @@ Erinnerungssystem
 - [x] Exploration einfacher Authentifizierungsmethoden ohne komplexe Benutzerprofile
 - [x] UI und Struktur designen (📵)
 
-✍️ Heute habe ich mithilfe von win11toast den Erinnerungssystem besser kennenlernen. Ich konnte erfolgreich lokale Windows-Benachrichtigungen erstellen, die für mein Haushaltsorganisations-Tool geeignet sind. (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, den Code von heute auf github hochzuladen.
+✍️ Heute habe ich mithilfe von win11toast den Erinnerungssystem besser kennenlernen. Ich konnte erfolgreich lokale Windows-Benachrichtigungen erstellen, die für mein Haushaltsorganisations-Tool geeignet sind.
 
 ## 9.5
 
@@ -45,20 +43,18 @@ Planen Sie nun Ihr Projekt, sodass die *Kern-Funktionalität* in 3 Sitzungen rea
 
 Diese Kern-Funktionalitäten brechen Sie nun in etwa 4 AP je herunter. Versuchen Sie jetzt bereits, auch die Sitzung vom 16.5 und 23.5 zu planen (im Wissen, dass Sie kleine Anpassungen an Ihrer Planung vornehmen können).
 
-- [ ] Datenmodell für Aufgaben und Einkaufslisten-Items erstellen (mit mongoDB)
-- [ ] CRUD-Funktionalität für Aufgaben implementieren (Erstellen, Lesen, Aktualisieren, Löschen)
-- [ ] CRUD-Funktionalität für Einkaufslisten-Items implementieren
+- [x] Datenmodell für Aufgaben und Einkaufslisten-Items erstellen (mit mongoDB)
+- [x] CRUD-Funktionalität für Aufgaben implementieren (Erstellen, Lesen, Aktualisieren, Löschen)
+- [x] CRUD-Funktionalität für Einkaufslisten-Items implementieren
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️  Vergessen Sie nicht, den Code von heute auf github hochzuladen.
+✍️ Heute habe ich das Datenmodell für Aufgaben und Einkaufslisten in MongoDB erstellt. Die Dokumentenstruktur umfasst Felder wie Titel, Beschreibung, Fälligkeitsdatum und Status für Aufgaben sowie Name, Menge und Kategorie für Einkaufsitems. Anschliessend habe ich die vollständige CRUD-Funktionalität für beide Entitäten implementiert, mit Routen zum Erstellen neuer Einträge, Abrufen von Listen oder einzelnen Items, Aktualisieren bestehender Einträge und Löschen nicht mehr benötigter Daten. Die Endpunkte wurden erfolgreich getestet und funktionieren wie erwartet.
 
 ## 16.5
 
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [ ] Implementieren eines einfachen Benutzer-Authentifizierungssystems (Registrierung, Login)
+- [ ] Entwicklung einer sicheren Passwort-Speicherung mit Hashing
+- [ ] Implementieren von Browser-Benachrichtigungen
+- [ ] Integration der Benachrichtigungen für fällige Aufgaben und wichtige Erinnerungen
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
