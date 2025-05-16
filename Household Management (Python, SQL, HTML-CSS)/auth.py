@@ -1,16 +1,16 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash, session, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for, flash, session, jsonify, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
-import re
 from datetime import datetime
+from bson.objectid import ObjectId
 
 auth_bp = Blueprint('auth', __name__)
 
-def is_valid_email(email):
-    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-    return re.match(pattern, email) is not None
+# MongoDB collections will be accessed via the mongo instance passed from app.py
 
+# Password validation helper function
 def is_strong_password(password):
+    # At least 8 characters and contains letters and numbers
     if len(password) < 8:
         return False
     if not any(c.isalpha() for c in password):
@@ -19,6 +19,7 @@ def is_strong_password(password):
         return False
     return True
 
+# Decorator for requiring login
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -27,15 +28,17 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+# Handling user routes
 @auth_bp.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
+        # Get user input
         username = request.form.get('username')
-        email = request.form.get('email')
         password = request.form.get('password')
         confirm_password = request.form.get('confirm_password')
         
-        if not username or not email or not password or not confirm_password:
+        # Validate inputs
+        if not username or not password or not confirm_password:
             flash('Alle Felder müssen ausgefüllt sein', 'error')
             return render_template('auth/register.html')
             
@@ -43,24 +46,21 @@ def register():
             flash('Passwörter stimmen nicht überein', 'error')
             return render_template('auth/register.html')
         
-        if not is_valid_email(email):
-            flash('Bitte geben Sie eine gültige E-Mail-Adresse ein', 'error')
-            return render_template('auth/register.html')
-        
         if not is_strong_password(password):
             flash('Passwort muss mindestens 8 Zeichen lang sein und Buchstaben und Zahlen enthalten', 'error')
             return render_template('auth/register.html')
         
+        # Check if user already exists
         mongo = current_app.mongo
-        existing_user = mongo.db.users.find_one({'$or': [{'email': email}, {'username': username}]})
+        existing_user = mongo.db.users.find_one({'username': username})
         
         if existing_user:
-            flash('Benutzer mit dieser E-Mail oder Benutzername existiert bereits', 'error')
+            flash('Benutzername existiert bereits', 'error')
             return render_template('auth/register.html')
         
+        # Create new user
         new_user = {
             'username': username,
-            'email': email,
             'password': generate_password_hash(password, method='pbkdf2:sha256'),  # Secure hashing
             'created_at': datetime.now(),
             'updated_at': datetime.now(),
@@ -78,20 +78,21 @@ def register():
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form.get('email')
+        username = request.form.get('username')
         password = request.form.get('password')
         
-        if not email or not password:
-            flash('Bitte E-Mail und Passwort eingeben', 'error')
+        if not username or not password:
+            flash('Bitte Benutzername und Passwort eingeben', 'error')
             return render_template('auth/login.html')
             
         mongo = current_app.mongo
-        user = mongo.db.users.find_one({'email': email})
+        user = mongo.db.users.find_one({'username': username})
         
         if not user or not check_password_hash(user['password'], password):
-            flash('Ungültige E-Mail oder Passwort', 'error')
+            flash('Ungültiger Benutzername oder Passwort', 'error')
             return render_template('auth/login.html')
             
+        # User authenticated, store in session
         session['user_id'] = str(user['_id'])
         session['username'] = user['username']
         
@@ -115,19 +116,26 @@ def profile():
     user = mongo.db.users.find_one({'_id': ObjectId(session['user_id'])})
     
     if request.method == 'POST':
+        # Update profile logic
         username = request.form.get('username')
-        email = request.form.get('email')
         new_password = request.form.get('new_password')
         current_password = request.form.get('current_password')
         notifications_enabled = 'notifications_enabled' in request.form
         
         update_data = {
             'username': username,
-            'email': email,
             'settings.notifications_enabled': notifications_enabled,
             'updated_at': datetime.now()
         }
         
+        # Check if username already exists (if changed)
+        if username != user['username']:
+            existing_user = mongo.db.users.find_one({'username': username})
+            if existing_user:
+                flash('Benutzername existiert bereits', 'error')
+                return render_template('auth/profile.html', user=user)
+        
+        # Validate password change if requested
         if new_password:
             if not current_password or not check_password_hash(user['password'], current_password):
                 flash('Aktuelles Passwort ist falsch', 'error')
@@ -139,10 +147,15 @@ def profile():
                 
             update_data['password'] = generate_password_hash(new_password, method='pbkdf2:sha256')
         
+        # Update user
         mongo.db.users.update_one(
             {'_id': ObjectId(session['user_id'])},
             {'$set': update_data}
         )
+        
+        # Update session if username changed
+        if username != user['username']:
+            session['username'] = username
         
         flash('Profil erfolgreich aktualisiert', 'success')
         return redirect(url_for('auth.profile'))
