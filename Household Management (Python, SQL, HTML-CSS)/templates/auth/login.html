@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmelden - Haushaltsplaner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Haushaltsplaner</h1>
+    </header>
+
+    <main>
+        <section class="form-container auth-form">
+            <h2>Anmelden</h2>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <form action="{{ url_for('auth.login') }}" method="post">
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="button">Anmelden</button>
+                </div>
+                <div class="auth-links">
+                    <p>Noch kein Konto? <a href="{{ url_for('auth.register') }}">Registrieren</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
