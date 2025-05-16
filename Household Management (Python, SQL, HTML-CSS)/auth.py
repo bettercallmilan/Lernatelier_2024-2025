@@ -47,7 +47,7 @@ def register():
         
         new_user = {
             'username': username,
-            'password': generate_password_hash(password, method='pbkdf2:sha256'),  # Secure hashing
+            'password': generate_password_hash(password, method='pbkdf2:sha256'),
             'created_at': datetime.now(),
             'updated_at': datetime.now(),
             'settings': {
