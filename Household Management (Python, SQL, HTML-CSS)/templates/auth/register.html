@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrieren - Haushaltsplaner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Haushaltsplaner</h1>
+    </header>
+
+    <main>
+        <section class="form-container auth-form">
+            <h2>Registrieren</h2>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <form action="{{ url_for('auth.register') }}" method="post">
+                <div class="form-group">
+                    <label for="username">Benutzername:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort:</label>
+                    <input type="password" id="password" name="password" required>
+                    <small>Passwort muss mindestens 8 Zeichen lang sein und Buchstaben und Zahlen enthalten</small>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Passwort bestätigen:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="button">Registrieren</button>
+                </div>
+                <div class="auth-links">
+                    <p>Bereits registriert? <a href="{{ url_for('auth.login') }}">Anmelden</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
