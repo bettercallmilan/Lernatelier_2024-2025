@@ -10,23 +10,18 @@ load_dotenv()
 
 app = Flask(__name__)
 
-# Configuration
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "your-secret-key-for-development")  # Ensure you have a secret key
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(days=7)  # Session lasts for 7 days
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(days=7)
 
-# Initialize MongoDB
 mongo = PyMongo(app)
 
-# Register blueprints
 app.register_blueprint(auth_bp)
 
-# Make mongo available to blueprints
 @app.before_request
 def before_request():
     current_app.mongo = mongo
 
-# Helper function to get current user ID
 def get_current_user_id():
     return session.get('user_id', None)
 
