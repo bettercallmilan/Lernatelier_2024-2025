@@ -51,21 +51,19 @@ Diese Kern-Funktionalitäten brechen Sie nun in etwa 4 AP je herunter. Versuchen
 
 ## 16.5
 
-- [ ] Implementieren eines einfachen Benutzer-Authentifizierungssystems (Registrierung, Login)
-- [ ] Entwicklung einer sicheren Passwort-Speicherung mit Hashing
+- [x] Implementieren eines einfachen Benutzer-Authentifizierungssystems (Registrierung, Login)
+- [x] Entwicklung einer sicheren Passwort-Speicherung mit Hashing
 - [ ] Implementieren von Browser-Benachrichtigungen
 - [ ] Integration der Benachrichtigungen für fällige Aufgaben und wichtige Erinnerungen
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️  Vergessen Sie nicht, den Code von heute auf github hochzuladen.
+✍️ Heute habe ich ein einfaches Benutzer-Authentifizierungssystem mit Flask implementiert. Ich habe Registrierungs- und Login-Funktionen erstellt. Dafür habe ich "Werkzeug" zum Hashen der Passwörter verwendet und sichergestellt, dass keine Klartextpasswörter in der Datenbank gespeichert werden. Die Benutzeroberfläche ist noch einfach gehalten, aber die Kernfunktionalität der Authentifizierung funktioniert mit Session-Management. Benachrichtigungen konnte ich heute zeitgemäss nicht implementieren.
 
 ## 23.5
 
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [ ] Implementieren von Browser-Benachrichtigungen
+- [ ] Integration der Benachrichtigungen für fällige Aufgaben und wichtige Erinnerungen
+- [ ] Evtl. Erstellen einer Profilseite für Benutzereinstellungen und Passwortänderung
+- [ ] Erstellung einer responsiven Benutzeroberfläche für alle Geräte
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
