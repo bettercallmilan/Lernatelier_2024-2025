@@ -11,27 +11,37 @@ app = Flask(__name__)
 
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(days=7)
 
 mongo = PyMongo(app)
 
+app.register_blueprint(auth_bp)
+
+@app.before_request
+def before_request():
+    current_app.mongo = mongo
+
 def get_current_user_id():
-    # return actual user ID from session later
-    # using a fixed ID for testing for now
-    return "test_user_id"
+    return session.get('user_id', None)
 
 # main page
 @app.route('/')
 def index():
-    return render_template('index.html')
+    if not get_current_user_id():
+        return redirect(url_for('auth.login'))
+    return render_template('index.html', username=session.get('username'))
 
 # show all tasks
 @app.route('/tasks')
+@login_required
 def list_tasks():
-    tasks = list(mongo.db.tasks.find({"user_id": get_current_user_id()}).sort("due_date", 1))
-    return render_template('tasks.html', tasks=tasks)
+    user_id = get_current_user_id()
+    tasks = list(mongo.db.tasks.find({"user_id": user_id}).sort("due_date", 1))
+    return render_template('tasks.html', tasks=tasks, username=session.get('username'))
 
 # create task
 @app.route('/tasks/create', methods=['POST'])
+@login_required
 def create_task():
     task = {
         "title": request.form.get('title'),
@@ -54,6 +64,7 @@ def create_task():
 
 # show task details
 @app.route('/tasks/<task_id>')
+@login_required
 def get_task(task_id):
     task = mongo.db.tasks.find_one({
         "_id": ObjectId(task_id), 
@@ -73,6 +84,7 @@ def get_task(task_id):
 
 # update task
 @app.route('/tasks/<task_id>/update', methods=['POST'])
+@login_required
 def update_task(task_id):
     update_data = {
         "title": request.form.get('title'),
@@ -99,6 +111,7 @@ def update_task(task_id):
 
 # toggle task status
 @app.route('/tasks/<task_id>/toggle', methods=['POST'])
+@login_required
 def toggle_task(task_id):
     task = mongo.db.tasks.find_one({
         "_id": ObjectId(task_id), 
@@ -126,6 +139,7 @@ def toggle_task(task_id):
 
 # delete task
 @app.route('/tasks/<task_id>/delete', methods=['POST'])
+@login_required
 def delete_task(task_id):
     result = mongo.db.tasks.delete_one({
         "_id": ObjectId(task_id), 
@@ -142,12 +156,14 @@ def delete_task(task_id):
 
 # show shopping list
 @app.route('/shopping')
+@login_required
 def list_shopping():
     items = list(mongo.db.shopping.find({"user_id": get_current_user_id()}).sort("category", 1))
     return render_template('shopping.html', items=items)
 
 # create shopping list item
 @app.route('/shopping/create', methods=['POST'])
+@login_required
 def create_shopping_item():
     item = {
         "name": request.form.get('name'),
@@ -169,6 +185,7 @@ def create_shopping_item():
 
 # show shopping list item details
 @app.route('/shopping/category/<category>')
+@login_required
 def filter_shopping(category):
     items = list(mongo.db.shopping.find({
         "user_id": get_current_user_id(),
@@ -184,6 +201,7 @@ def filter_shopping(category):
 
 # update shopping list item
 @app.route('/shopping/<item_id>/update', methods=['POST'])
+@login_required
 def update_shopping_item(item_id):
     update_data = {
         "name": request.form.get('name'),
@@ -209,6 +227,7 @@ def update_shopping_item(item_id):
 
 # toggle shopping list item status
 @app.route('/shopping/<item_id>/toggle', methods=['POST'])
+@login_required
 def toggle_shopping_item(item_id):
     item = mongo.db.shopping.find_one({
         "_id": ObjectId(item_id), 
@@ -236,6 +255,7 @@ def toggle_shopping_item(item_id):
 
 # delete shopping list item
 @app.route('/shopping/<item_id>/delete', methods=['POST'])
+@login_required
 def delete_shopping_item(item_id):
     result = mongo.db.shopping.delete_one({
         "_id": ObjectId(item_id), 
@@ -252,6 +272,7 @@ def delete_shopping_item(item_id):
 
 # clear all purchased items
 @app.route('/shopping/clear-purchased', methods=['POST'])
+@login_required
 def clear_purchased():
     result = mongo.db.shopping.delete_many({
         "user_id": get_current_user_id(),
