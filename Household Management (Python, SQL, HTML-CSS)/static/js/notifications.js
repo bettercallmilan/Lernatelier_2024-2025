@@ -17,3 +17,16 @@ function requestNotificationPermission() {
         });
     }
 }
+
+function showNotification(title, message) {
+    if (Notification.permission === 'granted') {
+        const notification = new Notification(title, {
+            body: message,
+        });
+        
+        notification.onclick = function() {
+            window.focus();
+            this.close();
+        };
+    }
+}
