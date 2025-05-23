@@ -49,4 +49,32 @@ function checkDueTasks() {
         .catch(error => console.error('Error checking due tasks:', error));
 }
 
+function displayOnSiteNotifications(tasks) {
+    const container = document.getElementById('notification-container');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    if (tasks.length === 0) {
+        container.innerHTML = '<p>No upcoming tasks due soon.</p>';
+        return;
+    }
+    
+    const list = document.createElement('ul');
+    list.className = 'notification-list';
+    
+    tasks.forEach(task => {
+        const item = document.createElement('li');
+        item.className = task.due_today ? 'notification-item urgent' : 'notification-item';
+        item.innerHTML = `
+            <span class="task-title">${task.title}</span>
+            <span class="due-date">${task.due_date}</span>
+        `;
+        list.appendChild(item);
+    });
+    
+    container.appendChild(list);
+}
+
+
 setInterval(checkDueTasks, 60 * 60 * 1000); // check immediately, then every hour
