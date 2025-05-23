@@ -26,6 +26,13 @@
             <p>Aufgaben & Einkaufsliste</p>
         </section>
 
+        <div class="notification-section">
+            <h3>Upcoming Tasks</h3>
+            <div id="notification-container">
+                <p>Loading task notifications...</p>
+            </div>
+        </div>
+
         <div class="cards-container">
             <div class="card">
                 <h3>Aufgaben</h3>
@@ -40,5 +47,6 @@
             </div>
         </div>
     </main>
+    <script src="{{ url_for('static', filename='js/notifications.js') }}"></script>
 </body>
 </html>
