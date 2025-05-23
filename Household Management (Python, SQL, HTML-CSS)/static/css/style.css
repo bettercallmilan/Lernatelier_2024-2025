@@ -284,6 +284,15 @@ main {
     border-left: 3px solid #ffc107;
 }
 
+.task-title {
+    font-weight: 500;
+}
+
+.due-date {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
 /* responsiveness */
 @media (max-width: 768px) {
     .cards-container {
