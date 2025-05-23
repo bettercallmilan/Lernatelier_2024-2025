@@ -21,11 +21,11 @@
     <main>
         <section class="page-header">
             <h2>Einkaufsliste</h2>
-            <button id="showFormBtn" class="button">Neuer Artikel</button>
+            <button id="showShoppingFormBtn" class="button">Neuer Artikel</button>
         </section>
 
                 <section id="shoppingForm" class="form-container" style="display: none;">
-            <h3 id="formTitle">Neuen Artikel hinzufügen</h3>
+            <h3 id="shoppingFormTitle">Neuen Artikel hinzufügen</h3>
             <form action="/shopping/create" method="post" id="shoppingItemForm">
                 <input type="hidden" id="item_id" name="item_id">
                 <div class="form-group">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-buttons">
                     <button type="submit" class="button">Speichern</button>
-                    <button type="button" id="cancelBtn" class="button button-secondary">Abbrechen</button>
+                    <button type="button" id="cancelShoppingBtn" class="button button-secondary">Abbrechen</button>
                 </div>
             </form>
         </section>
@@ -71,7 +71,7 @@
                                     {% if item.purchased %}&#9745;{% else %}&#9744;{% endif %}
                                 </button>
                             </form>
-                            <button type="button" class="icon-button edit-btn" 
+                            <button type="button" class="icon-button edit-btn shopping-edit-btn" 
                                 data-id="{{ item._id }}" 
                                 data-name="{{ item.name }}" 
                                 data-quantity="{{ item.quantity }}" 
@@ -86,45 +86,12 @@
                     {% endfor %}
                 </ul>
             {% else %}
-                <p class="no-items">Keine Artikel vorhanden</p>
+                <p class="no-items">Keine Artikel vorhanden.</p>
             {% endif %}
         </section>
     </main>
 
-    <script>
-        document.getElementById('showFormBtn').addEventListener('click', function() {
-            document.getElementById('shoppingForm').style.display = 'block';
-        });
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-        document.getElementById('cancelBtn').addEventListener('click', function() {
-            document.getElementById('shoppingForm').style.display = 'none';
-        });
-
-        const editBtns = document.querySelectorAll('.edit-btn');
-        editBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const id = this.getAttribute('data-id');
-                const name = this.getAttribute('data-name');
-                const quantity = this.getAttribute('data-quantity');
-                const category = this.getAttribute('data-category');
-                
-                document.getElementById('item_id').value = id;
-                document.getElementById('name').value = name;
-                document.getElementById('quantity').value = quantity || '';
-                document.getElementById('category').value = category;
-                
-                document.getElementById('formTitle').textContent = 'Artikel bearbeiten';
-                document.getElementById('shoppingItemForm').action = '/shopping/' + id + '/update';
-                document.getElementById('shoppingForm').style.display = 'block';
-            });
-        });
-
-        function resetForm() {
-            document.getElementById('item_id').value = '';
-            document.getElementById('name').value = '';
-            document.getElementById('quantity').value = '';
-            document.getElementById('category').value = 'Allgemein';
-        }
-    </script>
 </body>
 </html>

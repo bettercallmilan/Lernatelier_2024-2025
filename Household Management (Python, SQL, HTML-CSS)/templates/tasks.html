@@ -21,11 +21,11 @@
     <main>
         <section class="page-header">
             <h2>Aufgaben</h2>
-            <button id="showFormBtn" class="button">Neue Aufgabe</button>
+            <button id="showTaskFormBtn" class="button">Neue Aufgabe</button>
         </section>
 
         <section id="taskForm" class="form-container" style="display: none;">
-            <h3 id="formTitle">Neue Aufgabe hinzufügen</h3>
+            <h3 id="taskFormTitle">Neue Aufgabe hinzufügen</h3>
             <form action="/tasks/create" method="post" id="taskItemForm">
                 <input type="hidden" id="task_id" name="task_id">
                 <div class="form-group">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-buttons">
                     <button type="submit" class="button">Speichern</button>
-                    <button type="button" id="cancelBtn" class="button button-secondary">Abbrechen</button>
+                    <button type="button" id="cancelTaskBtn" class="button button-secondary">Abbrechen</button>
                 </div>
             </form>
         </section>
@@ -78,7 +78,7 @@
                                     {% if task.completed %}&#9745;{% else %}&#9744;{% endif %}
                                 </button>
                             </form>
-                            <button type="button" class="icon-button edit-btn" 
+                            <button type="button" class="icon-button edit-btn task-edit-btn" 
                                 data-id="{{ task._id }}" 
                                 data-title="{{ task.title }}" 
                                 data-description="{{ task.description }}" 
@@ -99,53 +99,7 @@
         </section>
     </main>
 
-    <script>
-        document.getElementById('showFormBtn').addEventListener('click', function() {
-            resetForm();
-            document.getElementById('formTitle').textContent = 'Neue Aufgabe hinzufügen';
-            document.getElementById('taskItemForm').action = '/tasks/create';
-            document.getElementById('taskForm').style.display = 'block';
-        });
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-        document.getElementById('cancelBtn').addEventListener('click', function() {
-            document.getElementById('taskForm').style.display = 'none';
-        });
-
-        const editBtns = document.querySelectorAll('.edit-btn');
-        editBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const id = this.getAttribute('data-id');
-                const title = this.getAttribute('data-title');
-                const description = this.getAttribute('data-description');
-                const dueDate = this.getAttribute('data-due-date');
-                const priority = this.getAttribute('data-priority');
-                
-                document.getElementById('task_id').value = id;
-                document.getElementById('title').value = title;
-                document.getElementById('description').value = description || '';
-                document.getElementById('due_date').value = dueDate || '';
-                
-                const prioritySelect = document.getElementById('priority');
-                for (let i = 0; i < prioritySelect.options.length; i++) {
-                    if (prioritySelect.options[i].value === priority) {
-                        prioritySelect.selectedIndex = i;
-                        break;
-                    }
-                }
-                
-                document.getElementById('formTitle').textContent = 'Aufgabe bearbeiten';
-                document.getElementById('taskItemForm').action = '/tasks/' + id + '/update';
-                document.getElementById('taskForm').style.display = 'block';
-            });
-        });
-
-        function resetForm() {
-            document.getElementById('task_id').value = '';
-            document.getElementById('title').value = '';
-            document.getElementById('description').value = '';
-            document.getElementById('due_date').value = '';
-            document.getElementById('priority').selectedIndex = 1;
-        }
-    </script>
 </body>
 </html>
