@@ -285,5 +285,36 @@ def clear_purchased():
     
     return redirect(url_for('list_shopping'))
 
+# notifications
+@app.route('/api/due-tasks')
+@login_required
+def api_due_tasks():
+    user_id = get_current_user_id()
+    today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+    tomorrow = today + timedelta(days=1)
+    next_week = today + timedelta(days=7)
+    
+    tasks = list(mongo.db.tasks.find({
+        "user_id": user_id,
+        "due_date": {"$gte": today.strftime("%Y-%m-%d"), "$lte": next_week.strftime("%Y-%m-%d")},
+        "completed": False
+    }).sort("due_date", 1))
+    
+    formatted_tasks = []
+    for task in tasks:
+        task_date = datetime.strptime(task["due_date"], "%Y-%m-%d")
+        formatted_tasks.append({
+            "_id": str(task["_id"]),
+            "title": task["title"],
+            "due_date": task["due_date"],
+            "priority": task["priority"],
+            "due_today": task["due_date"] == today.strftime("%Y-%m-%d")
+        })
+    
+    return jsonify({
+        "success": True,
+        "tasks": formatted_tasks
+    })
+
 if __name__ == "__main__":
     app.run(debug=True)
