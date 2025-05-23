@@ -31,7 +31,6 @@ function showNotification(title, message) {
     }
 }
 
-
 function checkDueTasks() {
     fetch('/api/due-tasks')
         .then(response => response.json())
@@ -75,6 +74,5 @@ function displayOnSiteNotifications(tasks) {
     
     container.appendChild(list);
 }
-
 
 setInterval(checkDueTasks, 60 * 60 * 1000); // check immediately, then every hour

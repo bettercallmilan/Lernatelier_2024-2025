@@ -251,6 +251,20 @@ main {
     margin-bottom: 1rem;
 }
 
+.notification-section {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.notification-section h3 {
+    margin-top: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
 /* responsiveness */
 @media (max-width: 768px) {
     .cards-container {
