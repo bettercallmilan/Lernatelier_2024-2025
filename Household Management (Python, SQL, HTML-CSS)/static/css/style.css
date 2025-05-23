@@ -251,6 +251,7 @@ main {
     margin-bottom: 1rem;
 }
 
+/* notifications */
 .notification-section {
     background-color: #f8f9fa;
     border-radius: 5px;
@@ -263,6 +264,24 @@ main {
     margin-top: 0;
     padding-bottom: 5px;
     border-bottom: 1px solid #ddd;
+}
+
+.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-item.urgent {
+    background-color: #fff3cd;
+    border-left: 3px solid #ffc107;
 }
 
 /* responsiveness */
