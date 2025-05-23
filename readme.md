@@ -60,23 +60,23 @@ Diese Kern-Funktionalitäten brechen Sie nun in etwa 4 AP je herunter. Versuchen
 
 ## 23.5
 
-- [ ] Implementieren von Browser-Benachrichtigungen
-- [ ] Integration der Benachrichtigungen für fällige Aufgaben und wichtige Erinnerungen
+- [x] Implementieren von Browser-Benachrichtigungen
+- [x] Integration der Benachrichtigungen für fällige Aufgaben und wichtige Erinnerungen
 - [ ] Evtl. Erstellen einer Profilseite für Benutzereinstellungen und Passwortänderung
-- [ ] Erstellung einer responsiven Benutzeroberfläche für alle Geräte
+- [x] Erstellung einer responsiven Benutzeroberfläche für alle Geräte
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️  Vergessen Sie nicht, den Code von heute auf github hochzuladen.
+✍️ Heute habe ich die Browser-Benachrichtigungen erfolgreich implementiert und mit dem Aufgabenmanagement verbunden. Die Anwendung jetzt Echtzeit-Benachrichtigungen für fällige Aufgaben und wichtige Erinnerungen anzeigen. Die Integration erfolgt über einen Hintergrundprozess, der regelmässig (jede Stunde) nach Aufgaben sucht, deren Fälligkeitsdatum erreicht wurde. Zusätzlich habe ich die Benutzeroberfläche vollständig responsiv gestaltet, sodass das Tool sowohl auf Desktop-Computern als auch auf mobilen Geräten gut funktioniert. Die Basis-Funktionalität ist nun komplett und einsatzbereit.
 
 ## 6.6
 
 Ihr Projekt sollte nun alle Funktionalität haben, dass man es benutzen kann. Allerdings gibt es sicher noch Teile, welche "schöner" werden können: Layout, Code, Architektur... beschreiben Sie kurz den Stand Ihres Projekts, und leiten Sie daraus 6 solche "kosmetischen" AP für den 6.6 und den 13.6 ab.
 
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
+Mein Haushaltsorganisations-Tool hat nun alle wesentlichen Funktionen implementiert: Aufgabenmanagement, Einkaufsliste, Benutzerauthentifizierung und ein Benachrichtigungssystem. Die Grundfunktionalität ist komplett, aber das Nutzererlebnis kann noch verbessert werden.
+
+- [ ] Verbesserung des visuellen Designs (konsistente Farbschema und bessere Typografie)
+- [ ] Optimierung des Layouts (bessere Benutzerführung und intuitivere Navigation)
+- [ ] Hinzufügen von sanften Übergangsanimationen zwischen Ansichten und bei Statusänderungen
+- [ ] Code-Refactoring
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
@@ -84,8 +84,8 @@ Ihr Projekt sollte nun alle Funktionalität haben, dass man es benutzen kann. Al
 
 ## 13.6
 
-- [ ] ...
-- [ ] ...
+- [ ] Hinzufügen von Dunkelmodus
+- [ ] Erstellen einer einfachen Profilseite für Benutzereinstellungen und Passwortänderung
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
