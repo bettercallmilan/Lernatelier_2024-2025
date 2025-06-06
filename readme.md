@@ -73,14 +73,12 @@ Ihr Projekt sollte nun alle Funktionalität haben, dass man es benutzen kann. Al
 
 Mein Haushaltsorganisations-Tool hat nun alle wesentlichen Funktionen implementiert: Aufgabenmanagement, Einkaufsliste, Benutzerauthentifizierung und ein Benachrichtigungssystem. Die Grundfunktionalität ist komplett, aber das Nutzererlebnis kann noch verbessert werden.
 
-- [ ] Verbesserung des visuellen Designs (konsistente Farbschema und bessere Typografie)
-- [ ] Optimierung des Layouts (bessere Benutzerführung und intuitivere Navigation)
-- [ ] Hinzufügen von sanften Übergangsanimationen zwischen Ansichten und bei Statusänderungen
+- [x] Verbesserung des visuellen Designs (konsistente Farbschema und bessere Typografie)
+- [x] Optimierung des Layouts (bessere Benutzerführung und intuitivere Navigation)
+- [x] Hinzufügen von sanften Übergangsanimationen zwischen Ansichten und bei Statusänderungen
 - [ ] Code-Refactoring
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️  Vergessen Sie nicht, den Code von heute auf github hochzuladen.
+✍️ Heute habe ich das visuelle Design meines Haushaltsorganisations-Tools überarbeitet. Ein konsistentes Farbschema wurde implementiert, das verschiedene Funktionsbereiche klar voneinander abgrenzt. Das Layout wurde durch Neustrukturierung der Navigation und prominentere Platzierung wichtiger Funktionen verbessert. Alle Änderungen wurden mit CSS umgesetzt und sind vollständig responsiv.
 
 ## 13.6
 
