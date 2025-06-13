@@ -310,5 +310,47 @@ def api_due_tasks():
         "tasks": formatted_tasks
     })
 
+# user profile page
+@app.route('/profile')
+@login_required
+def profile():
+    return render_template('profile.html', username=session.get('username'))
+
+# change password
+@app.route('/profile/change-password', methods=['POST'])
+@login_required
+def change_password():
+    current_password = request.form.get('current_password')
+    new_password = request.form.get('new_password')
+    confirm_password = request.form.get('confirm_password')
+    
+    if not all([current_password, new_password, confirm_password]):
+        flash('Alle Felder sind erforderlich', 'error')
+        return redirect(url_for('profile'))
+    
+    if new_password != confirm_password:
+        flash('Die neuen Passwörter stimmen nicht überein', 'error')
+        return redirect(url_for('profile'))
+    
+    if len(new_password) < 5:
+        flash('Das neue Passwort muss mindestens 5 Zeichen lang sein', 'error')
+        return redirect(url_for('profile'))
+    
+    user_id = get_current_user_id()
+    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    
+    if not user or not check_password_hash(user['password'], current_password):
+        flash('Das aktuelle Passwort ist falsch', 'error')
+        return redirect(url_for('profile'))
+    
+    hashed_password = generate_password_hash(new_password)
+    mongo.db.users.update_one(
+        {"_id": ObjectId(user_id)},
+        {"$set": {"password": hashed_password, "updated_at": datetime.now()}}
+    )
+    
+    flash('Passwort erfolgreich geändert', 'success')
+    return redirect(url_for('profile'))
+
 if __name__ == "__main__":
     app.run(debug=True)
