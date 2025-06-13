@@ -83,17 +83,16 @@ Mein Haushaltsorganisations-Tool hat nun alle wesentlichen Funktionen implementi
 ## 13.6
 
 - [ ] Hinzufügen von Dunkelmodus
-- [ ] Erstellen einer einfachen Profilseite für Benutzereinstellungen und Passwortänderung
+- [x] Erstellen einer einfachen Profilseite für Benutzereinstellungen und Passwortänderung
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️  Vergessen Sie nicht, den Code von heute auf github hochzuladen.
+✍️ Heute habe ich eine einfache Profilseite für Benutzereinstellungen implementiert. Benutzer können jetzt ihre Passwörter ändern, wobei das alte Passwort zur Verifikation abgefragt wird. Die Seite enthält grundlegende Benutzerinformationen und Einstellungsoptionen. Leider hatte ich heute keine Zeit mehr für die Implementierung des Dunkelmodus, da die Passwort-Änderungsfunktion mehr Zeit in Anspruch genommen hat als geplant. Die Profilseite ist jedoch vollständig funktional und responsiv gestaltet.
 
 ## 20.6
 
 Was fehlt Ihrem fertigen Projekt noch, um es auszuliefern? Reicht die Zeit für ein *nice-to-have feature*?
 
-- [ ] ...
+- [ ] Dark Mode
+- [ ] Animations anpassen
 
 Bereiten Sie in den verbleibenden 2 AP Ihre Präsentation vor
 
@@ -102,6 +101,6 @@ Bereiten Sie in den verbleibenden 2 AP Ihre Präsentation vor
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
-☝️  Vergessen Sie nicht, die Unterlagen für Ihre Präsentation auf github hochzuladen.
+☝️ Vergessen Sie nicht, die Unterlagen für Ihre Präsentation auf github hochzuladen.
 
 ## 27.6
