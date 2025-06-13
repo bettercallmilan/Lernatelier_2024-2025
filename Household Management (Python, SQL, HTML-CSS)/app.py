@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 import os
 from dotenv import load_dotenv
 from auth import auth_bp, login_required
+from werkzeug.security import generate_password_hash, check_password_hash
 
 load_dotenv()
 
@@ -36,8 +37,7 @@ def index():
 @app.route('/tasks')
 @login_required
 def list_tasks():
-    user_id = get_current_user_id()
-    tasks = list(mongo.db.tasks.find({"user_id": user_id}).sort("due_date", 1))
+    tasks = list(mongo.db.tasks.find({}).sort("due_date", 1))
     return render_template('tasks.html', tasks=tasks, username=session.get('username'))
 
 # create task
@@ -50,7 +50,8 @@ def create_task():
         "due_date": request.form.get('due_date'),
         "priority": request.form.get('priority', 'medium'),
         "completed": False,
-        "user_id": get_current_user_id(),
+        "created_by": get_current_user_id(),
+        "created_by_username": session.get('username'),
         "created_at": datetime.now(),
         "updated_at": datetime.now()
     }
@@ -67,10 +68,7 @@ def create_task():
 @app.route('/tasks/<task_id>')
 @login_required
 def get_task(task_id):
-    task = mongo.db.tasks.find_one({
-        "_id": ObjectId(task_id), 
-        "user_id": get_current_user_id()
-    })
+    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     
     if not task:
         if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -92,13 +90,15 @@ def update_task(task_id):
         "description": request.form.get('description'),
         "due_date": request.form.get('due_date'),
         "priority": request.form.get('priority'),
-        "updated_at": datetime.now()
+        "updated_at": datetime.now(),
+        "last_updated_by": get_current_user_id(),
+        "last_updated_by_username": session.get('username')
     }
     
     update_data = {k: v for k, v in update_data.items() if v is not None}
     
     result = mongo.db.tasks.update_one(
-        {"_id": ObjectId(task_id), "user_id": get_current_user_id()},
+        {"_id": ObjectId(task_id)},
         {"$set": update_data}
     )
     
@@ -114,10 +114,7 @@ def update_task(task_id):
 @app.route('/tasks/<task_id>/toggle', methods=['POST'])
 @login_required
 def toggle_task(task_id):
-    task = mongo.db.tasks.find_one({
-        "_id": ObjectId(task_id), 
-        "user_id": get_current_user_id()
-    })
+    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     
     if not task:
         if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -126,8 +123,13 @@ def toggle_task(task_id):
     
     new_status = not task.get('completed', False)
     result = mongo.db.tasks.update_one(
-        {"_id": ObjectId(task_id), "user_id": get_current_user_id()},
-        {"$set": {"completed": new_status, "updated_at": datetime.now()}}
+        {"_id": ObjectId(task_id)},
+        {"$set": {
+            "completed": new_status, 
+            "updated_at": datetime.now(),
+            "completed_by": get_current_user_id() if new_status else None,
+            "completed_by_username": session.get('username') if new_status else None
+        }}
     )
     
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -142,10 +144,7 @@ def toggle_task(task_id):
 @app.route('/tasks/<task_id>/delete', methods=['POST'])
 @login_required
 def delete_task(task_id):
-    result = mongo.db.tasks.delete_one({
-        "_id": ObjectId(task_id), 
-        "user_id": get_current_user_id()
-    })
+    result = mongo.db.tasks.delete_one({"_id": ObjectId(task_id)})
     
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         if result.deleted_count > 0:
@@ -159,7 +158,7 @@ def delete_task(task_id):
 @app.route('/shopping')
 @login_required
 def list_shopping():
-    items = list(mongo.db.shopping.find({"user_id": get_current_user_id()}).sort("category", 1))
+    items = list(mongo.db.shopping.find({}).sort("category", 1))
     return render_template('shopping.html', items=items)
 
 # create shopping list item
@@ -171,7 +170,8 @@ def create_shopping_item():
         "quantity": request.form.get('quantity', '1'),
         "category": request.form.get('category', 'Allgemein'),
         "purchased": False,
-        "user_id": get_current_user_id(),
+        "created_by": get_current_user_id(),
+        "created_by_username": session.get('username'),
         "created_at": datetime.now(),
         "updated_at": datetime.now()
     }
@@ -188,10 +188,7 @@ def create_shopping_item():
 @app.route('/shopping/category/<category>')
 @login_required
 def filter_shopping(category):
-    items = list(mongo.db.shopping.find({
-        "user_id": get_current_user_id(),
-        "category": category
-    }).sort("name", 1))
+    items = list(mongo.db.shopping.find({"category": category}).sort("name", 1))
     
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         for item in items:
@@ -208,13 +205,15 @@ def update_shopping_item(item_id):
         "name": request.form.get('name'),
         "quantity": request.form.get('quantity'),
         "category": request.form.get('category'),
-        "updated_at": datetime.now()
+        "updated_at": datetime.now(),
+        "last_updated_by": get_current_user_id(),
+        "last_updated_by_username": session.get('username')
     }
     
     update_data = {k: v for k, v in update_data.items() if v is not None}
     
     result = mongo.db.shopping.update_one(
-        {"_id": ObjectId(item_id), "user_id": get_current_user_id()},
+        {"_id": ObjectId(item_id)},
         {"$set": update_data}
     )
     
@@ -230,10 +229,7 @@ def update_shopping_item(item_id):
 @app.route('/shopping/<item_id>/toggle', methods=['POST'])
 @login_required
 def toggle_shopping_item(item_id):
-    item = mongo.db.shopping.find_one({
-        "_id": ObjectId(item_id), 
-        "user_id": get_current_user_id()
-    })
+    item = mongo.db.shopping.find_one({"_id": ObjectId(item_id)})
     
     if not item:
         if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -242,8 +238,13 @@ def toggle_shopping_item(item_id):
     
     new_status = not item.get('purchased', False)
     result = mongo.db.shopping.update_one(
-        {"_id": ObjectId(item_id), "user_id": get_current_user_id()},
-        {"$set": {"purchased": new_status, "updated_at": datetime.now()}}
+        {"_id": ObjectId(item_id)},
+        {"$set": {
+            "purchased": new_status, 
+            "updated_at": datetime.now(),
+            "purchased_by": get_current_user_id() if new_status else None,
+            "purchased_by_username": session.get('username') if new_status else None
+        }}
     )
     
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -258,10 +259,7 @@ def toggle_shopping_item(item_id):
 @app.route('/shopping/<item_id>/delete', methods=['POST'])
 @login_required
 def delete_shopping_item(item_id):
-    result = mongo.db.shopping.delete_one({
-        "_id": ObjectId(item_id), 
-        "user_id": get_current_user_id()
-    })
+    result = mongo.db.shopping.delete_one({"_id": ObjectId(item_id)})
     
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         if result.deleted_count > 0:
@@ -275,10 +273,7 @@ def delete_shopping_item(item_id):
 @app.route('/shopping/clear-purchased', methods=['POST'])
 @login_required
 def clear_purchased():
-    result = mongo.db.shopping.delete_many({
-        "user_id": get_current_user_id(),
-        "purchased": True
-    })
+    result = mongo.db.shopping.delete_many({"purchased": True})
     
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         return jsonify({"success": True, "deleted_count": result.deleted_count})
@@ -289,13 +284,11 @@ def clear_purchased():
 @app.route('/api/due-tasks')
 @login_required
 def api_due_tasks():
-    user_id = get_current_user_id()
     today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
     tomorrow = today + timedelta(days=1)
     next_week = today + timedelta(days=7)
     
     tasks = list(mongo.db.tasks.find({
-        "user_id": user_id,
         "due_date": {"$gte": today.strftime("%Y-%m-%d"), "$lte": next_week.strftime("%Y-%m-%d")},
         "completed": False
     }).sort("due_date", 1))
@@ -308,7 +301,8 @@ def api_due_tasks():
             "title": task["title"],
             "due_date": task["due_date"],
             "priority": task["priority"],
-            "due_today": task["due_date"] == today.strftime("%Y-%m-%d")
+            "due_today": task["due_date"] == today.strftime("%Y-%m-%d"),
+            "created_by_username": task.get("created_by_username", "Unbekannt")
         })
     
     return jsonify({
