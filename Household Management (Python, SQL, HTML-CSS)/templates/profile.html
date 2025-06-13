@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Haushaltsplaner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Haushaltsplaner</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Start</a></li>
+                <li><a href="/tasks">Aufgaben</a></li>
+                <li><a href="/shopping">Einkaufsliste</a></li>
+                <li><a href="/profile" class="active">Profil</a></li>
+                <li class="logout-item" style="margin-left: auto;">
+                    <a href="{{ url_for('auth.logout') }}" class="logout-link">Abmelden</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Profil verwalten</h2>
+        </section>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'success' if category == 'success' else 'error' }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="profile-container">
+            <div class="card profile-info">
+                <h3>Benutzerinformationen</h3>
+                <div class="user-info">
+                    <p><strong>Benutzername:</strong> {{ username }}</p>
+                </div>
+            </div>
+
+            <!-- Change Password Card -->
+            <div class="card password-change">
+                <h3>Passwort ändern</h3>
+                <form action="{{ url_for('change_password') }}" method="post" class="password-form">
+                    <div class="form-group">
+                        <label for="current_password">Aktuelles Passwort:</label>
+                        <input type="password" id="current_password" name="current_password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="new_password">Neues Passwort:</label>
+                        <input type="password" id="new_password" name="new_password" required minlength="5">
+                        <small class="form-hint">Mindestens 5 Zeichen</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm_password">Neues Passwort bestätigen:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required minlength="5">
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="button">Passwort ändern</button>
+                        <a href="/" class="button-secondary1">Zurück</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+</body>
+</html>
