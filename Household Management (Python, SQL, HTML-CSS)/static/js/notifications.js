@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function requestNotificationPermission() {
     if (!('Notification' in window)) {
-        console.log('This browser does not support notifications');
+        console.log('Dieser Browser unterstützt keine Benachrichtigungen');
         return;
     }
     
     if (Notification.permission !== 'granted' && Notification.permission !== 'denied') {
         Notification.requestPermission().then(function(permission) {
             if (permission === 'granted') {
-                console.log('Notification permission granted');
+                console.log('Benachrichtigungsberechtigung erteilt');
             }
         });
     }
@@ -40,12 +40,12 @@ function checkDueTasks() {
                 
                 data.tasks.forEach(task => {
                     if (task.due_today) {
-                        showNotification('Task Due Today', `"${task.title}" is due today!`);
+                        showNotification('Aufgabe heute fällig', `"${task.title}" ist heute fällig!`);
                     }
                 });
             }
         })
-        .catch(error => console.error('Error checking due tasks:', error));
+        .catch(error => console.error('Fehler beim Prüfen der fälligen Aufgaben:', error));
 }
 
 function displayOnSiteNotifications(tasks) {
@@ -55,7 +55,7 @@ function displayOnSiteNotifications(tasks) {
     container.innerHTML = '';
     
     if (tasks.length === 0) {
-        container.innerHTML = '<p>No upcoming tasks due soon.</p>';
+        container.innerHTML = '<p>Keine anstehenden Aufgaben in nächster Zeit fällig</p>';
         return;
     }
     
