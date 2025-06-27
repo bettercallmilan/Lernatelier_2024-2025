@@ -92,15 +92,15 @@ Mein Haushaltsorganisations-Tool hat nun alle wesentlichen Funktionen implementi
 Was fehlt Ihrem fertigen Projekt noch, um es auszuliefern? Reicht die Zeit für ein *nice-to-have feature*?
 
 - [ ] Dark Mode
-- [ ] Animations anpassen
+- [x] Animations anpassen
 
 Bereiten Sie in den verbleibenden 2 AP Ihre Präsentation vor
 
-- [ ] Materialien der Präsentation vorbereiten
-- [ ] Präsentation üben
+- [x] Materialien der Präsentation vorbereiten
+- [x] Präsentation üben
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, die Unterlagen für Ihre Präsentation auf github hochzuladen.
+✍️ Heute habe ich die Animationen angepasst. Dark Mode habe ich ausgelassen, da es zu aufwändig wäre mit den CSS root Farben. Ich konnte meine einfolige Präsentation fertigstellen. 
 
 ## 27.6
+
+Ende
