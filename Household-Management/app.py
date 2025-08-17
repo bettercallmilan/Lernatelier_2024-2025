@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for, session, flash, current_app
-from flask_pymongo import PyMongo
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session, flash
 from bson.objectid import ObjectId
 from datetime import datetime, timedelta
 import os
@@ -354,4 +353,6 @@ def change_password():
     return redirect(url_for('profile'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
