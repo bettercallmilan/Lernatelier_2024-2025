@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for, session, flash
+from flask import Flask, render_template, request, jsonify, redirect, url_for, session, flash, current_app
+from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from datetime import datetime, timedelta
 import os
