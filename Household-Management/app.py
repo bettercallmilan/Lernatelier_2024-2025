@@ -3,6 +3,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from datetime import datetime, timedelta
 import os
+import certifi
 import pymongo
 from dotenv import load_dotenv
 from auth import auth_bp, login_required
@@ -16,7 +17,7 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(days=7)
 
-mongo = PyMongo(app)
+mongo = PyMongo(app, tlsCAFile=certifi.where())
 
 app.register_blueprint(auth_bp)
 
