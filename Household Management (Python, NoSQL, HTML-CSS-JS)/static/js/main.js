@@ -5,7 +5,7 @@ function addEventIfExists(id, event, callback) {
     }
 }
 
-// ==================== TASKS ====================
+// TASKS
 // reset
 function resetTaskForm() {
     const taskIdField = document.getElementById('task_id');
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ==================== SHOPPING ====================
+// SHOPPING
 // reset
 function resetShoppingForm() {
     const itemIdField = document.getElementById('item_id');
