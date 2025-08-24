@@ -3,8 +3,11 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from datetime import datetime, timedelta
 import os
+<<<<<<< HEAD:Household-Management/app.py
 import certifi
 import pymongo
+=======
+>>>>>>> parent of 1cfb092 (rename folder):Household Management (Python, SQL, HTML-CSS)/app.py
 from dotenv import load_dotenv
 from auth import auth_bp, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
