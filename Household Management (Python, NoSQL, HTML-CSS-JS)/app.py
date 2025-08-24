@@ -3,11 +3,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from datetime import datetime, timedelta
 import os
-<<<<<<< HEAD:Household-Management/app.py
-import certifi
 import pymongo
-=======
->>>>>>> parent of 1cfb092 (rename folder):Household Management (Python, SQL, HTML-CSS)/app.py
 from dotenv import load_dotenv
 from auth import auth_bp, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -20,7 +16,7 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(days=7)
 
-mongo = PyMongo(app, tlsCAFile=certifi.where())
+mongo = PyMongo(app)
 
 app.register_blueprint(auth_bp)
 
@@ -358,6 +354,4 @@ def change_password():
     return redirect(url_for('profile'))
 
 if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(debug=True)
